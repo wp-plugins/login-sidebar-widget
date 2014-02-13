@@ -43,8 +43,8 @@ This is a simple login form in the widget. This will allow users to login to the
 
 == Screenshots ==
 
-1. front end sidebar view
-2. admin panel widget view
+1. front end sidebar view.
+2. admin panel widget view.
 
 
 == Changelog ==
