@@ -8,13 +8,13 @@ Stable tag: 4.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-This is a simple login form in the widget. This will allow users to login to the site from front ent. 
+This is a simple login form in the widget. This will allow users to login to the site from frontend. 
 
 == Description ==
 
 * This is a simple login form in the widget. 
 * just install the plugin and add the login widget in the sidebar. 
-* Change some settings in the login widget panel and you are good to go. 
+* Change some 'optional' settings in the login widget panel and you are good to go. 
 * Add css as you prefer because the form structure is really very simple.
 
 = Other Optional Options =
@@ -43,8 +43,8 @@ This is a simple login form in the widget. This will allow users to login to the
 
 == Screenshots ==
 
-1. front end sidebar view.
-2. admin panel widget view.
+1. front end sidebar view
+2. admin panel widget view
 
 
 == Changelog ==
