@@ -4,7 +4,7 @@ Donate link: #
 Tags: login, widget, login widget, widget login, sidebar login, login form, user login, authentication
 Requires at least: 2.0.2
 Tested up to: 3.8.1
-Stable tag: 4.3
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -49,11 +49,9 @@ This is a simple login form in the widget. This will allow users to login to the
 
 == Changelog ==
 
-= 1.0 =
+= 1.0.1 =
 * this is the first release.
 
-= 0.1 =
-* version 0.1
 
 == Upgrade Notice ==
 
