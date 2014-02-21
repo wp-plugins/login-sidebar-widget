@@ -1,6 +1,6 @@
 === Login Widget ===
 Contributors: afo
-Donate link: #
+Donate link: http://donateafo.net84.net/
 Tags: login, widget, login widget, widget login, sidebar login, login form, user login, authentication
 Requires at least: 2.0.2
 Tested up to: 3.8.1
