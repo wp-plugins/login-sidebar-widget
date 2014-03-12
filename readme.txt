@@ -4,7 +4,7 @@ Donate link: http://donateafo.net84.net/
 Tags: login, widget, login widget, widget login, sidebar login, login form, user login, authentication
 Requires at least: 2.0.2
 Tested up to: 3.8.1
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -14,7 +14,7 @@ This is a simple login form in the widget. This will allow users to login to the
 
 * This is a simple login form in the widget. 
 * just install the plugin and add the login widget in the sidebar. 
-* Change some 'optional' settings in the login widget panel and you are good to go. 
+* Change some 'optional' settings in `Settings-> Login Widget Settings` and you are good to go. 
 * Add css as you prefer because the form structure is really very simple.
 
 = Other Optional Options =
@@ -27,8 +27,12 @@ This is a simple login form in the widget. This will allow users to login to the
 
 1. Upload `login-sidebar-widget.zip` to the `/wp-content/plugins/` directory.
 2. Activate the plugin through the 'Plugins' menu in WordPress.
-3. Go to `Appearance->Widgets` ,in available widgets you will find `Login Widget AFO` widget, drag it to chosen widget area where you want it to appear.
-4. Now visit your blog and you will see the login form section.
+3. Go to `Settings-> Login Widget Settings`, and set some options. It's really easy.
+4. Go to `Appearance->Widgets` ,in available widgets you will find `Login Widget AFO` widget, drag it to chosen widget area where you want it to appear.
+5. You can also use shortcodes to insert login form in post or pages. [login_widget title="Login Here"]
+5. Now visit your blog and you will see the login form section.
+
+
 
 
 == Frequently Asked Questions ==
@@ -44,7 +48,8 @@ This is a simple login form in the widget. This will allow users to login to the
 == Screenshots ==
 
 1. front end sidebar view
-2. admin panel widget view
+2. settings page view
+3. widget view
 
 
 == Changelog ==
