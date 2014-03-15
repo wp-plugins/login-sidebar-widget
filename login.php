@@ -32,7 +32,7 @@ $logout_redirect_page = get_option('logout_redirect_page');
 $link_in_username = get_option('link_in_username');
 ?>
 
-<table width="98%" border="0" style="background-color:#FFFFD2; border:1px solid #FFFF00;">
+<table width="98%" border="0" style="background-color:#FFFFD2; border:1px solid #E6DB55;">
  <tr>
  <td align="right"><h3>Even $0.60 Can Make A Difference</h3></td>
     <td><form name="_xclick" action="https://www.paypal.com/cgi-bin/webscr" method="post">
@@ -99,7 +99,7 @@ $link_in_username = get_option('link_in_username');
  
   <tr>
     <td>&nbsp;</td>
-    <td><input type="submit" name="submit" value="Save" /></td>
+    <td><input type="submit" name="submit" value="Save" class="button button-primary button-large" /></td>
   </tr>
   <tr>
     <td>&nbsp;</td>
