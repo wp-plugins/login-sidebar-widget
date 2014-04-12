@@ -1,5 +1,5 @@
 === Login Widget With Shortcode ===
-Contributors: afo
+Contributors: avimegladon
 Donate link: http://donateafo.net84.net/
 Tags: login, widget, login widget, widget login, sidebar login, login form, user login, authentication
 Requires at least: 2.0.2
