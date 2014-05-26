@@ -4,7 +4,7 @@ Donate link: http://donateafo.net84.net/
 Tags: login, widget, login widget, widget login, sidebar login, login form, user login, authentication
 Requires at least: 2.0.2
 Tested up to: 3.8.1
-Stable tag: 2.0.1
+Stable tag: 2.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -54,6 +54,8 @@ This is a simple login form in the widget. This will allow users to login to the
 
 == Changelog ==
 
+= 2.0.2 =
+* CSS file bug issue is solved.
 
 = 2.0.1 =
 * Shortcode functionality is added.
