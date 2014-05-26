@@ -98,7 +98,7 @@ class login_wid extends WP_Widget {
 	}
 	
 	public function register_plugin_styles() {
-		wp_enqueue_style( 'style_login_widget', plugins_url( 'login-sidebar-widget/style_login_widget.css' ) );
+		wp_enqueue_style( 'style_login_widget', plugins_url( 'login_widget/style_login_widget.css' ) );
 	}
 	
 } 
