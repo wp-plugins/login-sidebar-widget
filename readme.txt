@@ -4,7 +4,7 @@ Donate link: http://donateafo.net84.net/
 Tags: login, widget, login widget, widget login, sidebar login, login form, user login, authentication
 Requires at least: 2.0.2
 Tested up to: 3.8.1
-Stable tag: 2.0.2
+Stable tag: 2.1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
