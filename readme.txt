@@ -54,6 +54,9 @@ This is a simple login form in the widget. This will allow users to login to the
 
 == Changelog ==
 
+= 2.1.2 =
+* Fixed one bug.
+
 = 2.0.2 =
 * CSS file bug issue is solved.
 
