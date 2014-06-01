@@ -22,6 +22,9 @@ This is a simple login form in the widget. This will allow users to login to the
 * Choose redirect page after logout.
 * Choose user profile page.
 
+= Note =
+There is a PRO version of this plugin that supports login with <strong>Facebook</strong>, <strong>Google</strong> And <strong>Twitter</strong>. You can get it <a href="http://donateafo.net84.net/fb-login-widget-pro/" target="_blank">here</a> in <strong>USD 1.00</strong>
+
 == Installation ==
 
 
@@ -53,9 +56,6 @@ This is a simple login form in the widget. This will allow users to login to the
 
 
 == Changelog ==
-
-= 2.1.2 =
-* Fixed one bug.
 
 = 2.0.2 =
 * CSS file bug issue is solved.
