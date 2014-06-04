@@ -27,12 +27,15 @@ class login_settings {
 	
 	$this->donate_form_login();
 	?>
+	<table width="98%" border="0" style="background-color:#FFFFD2; border:1px solid #E6DB55; padding:0px 0px 0px 10px; margin:2px;">
+  <tr>
+    <td><p>There is a PRO version of this plugin that supports login with <strong>Facebook</strong>, <strong>Google</strong> And <strong>Twitter</strong>. You can get it <a href="http://donateafo.net84.net/fb-login-widget-pro/" target="_blank">here</a> in <strong>USD 1.00</strong> </p></td>
+  </tr>
+</table>
+
 	<form name="f" method="post" action="">
 	<input type="hidden" name="option" value="login_widget_afo_save_settings" />
 	<table width="100%" border="0">
-	 <tr>
-			<td colspan="2"><p>There is a PRO version of this plugin that supports login with <strong>Facebook</strong>, <strong>Google</strong> And <strong>Twitter</strong>. You can get it <a href="http://donateafo.net84.net/fb-login-widget-pro/" target="_blank">here</a> in <strong>USD 1.00</strong> </p></td>
-		  </tr>
 	  <tr>
 		<td width="45%"><h1><?php echo self::$title?></h1></td>
 		<td width="55%">&nbsp;</td>
@@ -108,7 +111,7 @@ class login_settings {
 	}
 	
 	function donate_form_login(){?>
-	<table width="98%" border="0" style="background-color:#FFFFD2; border:1px solid #E6DB55;">
+	<table width="98%" border="0" style="background-color:#FFFFD2; border:1px solid #E6DB55; margin:2px;">
 	 <tr>
 	 <td align="right"><h3>Even $0.60 Can Make A Difference</h3></td>
 		<td><form name="_xclick" action="https://www.paypal.com/cgi-bin/webscr" method="post">
