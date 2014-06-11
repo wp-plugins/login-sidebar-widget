@@ -40,6 +40,9 @@ class login_wid extends WP_Widget {
 	}
 	
 	public function loginForm(){
+		if(!session_id()){
+			@session_start();
+		}
 		global $post;
 		$redirect_page = get_option('redirect_page');
 		$logout_redirect_page = get_option('logout_redirect_page');
@@ -56,6 +59,7 @@ class login_wid extends WP_Widget {
 		} else {
 			$logout_redirect_page = get_permalink($post->ID);
 		}
+		$this->load_script();
 		$this->error_message();
 		if(!is_user_logged_in()){
 		?>
@@ -91,20 +95,34 @@ class login_wid extends WP_Widget {
 	
 	public function error_message(){
 		if($_SESSION['msg']){
-			echo '<div class="'.$_SESSION['msg_class'].'">'.$_SESSION['msg'].'</div>';
+			echo '<div class="'.$_SESSION['msg_class'].'">'.$_SESSION['msg'].$this->message_close_button().'</div>';
 			unset($_SESSION['msg']);
 			unset($_SESSION['msg_class']);
 		}
+	}
+	
+	public function message_close_button(){
+		$cb = '<a href="javascript:void(0);" onclick="closeMessage();" class="close_button_afo">x</a>';
+		return $cb;
 	}
 	
 	public function register_plugin_styles() {
 		wp_enqueue_style( 'style_login_widget', plugins_url( 'login-sidebar-widget/style_login_widget.css' ) );
 	}
 	
+	public function load_script(){?>
+		<script type="text/javascript">
+			function closeMessage(){jQuery('.error_wid_login').hide();}
+		</script>
+	<?php }
+	
 } 
 
 function login_validate(){
 	if($_POST['option'] == "afo_user_login"){
+		if(!session_id()){
+			session_start();
+		}
 		global $post;
 		if($_POST['user_username'] != "" and $_POST['user_password'] != ""){
 			$creds = array();
