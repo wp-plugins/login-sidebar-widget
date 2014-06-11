@@ -1,7 +1,7 @@
 === Login Widget With Shortcode ===
 Contributors: avimegladon
 Donate link: http://donateafo.net84.net/
-Tags: login, widget, login widget, widget login, sidebar login, login form, user login, authentication
+Tags: login, widget, login widget, widget login, sidebar login, login form, user login, authentication, facebook login, twitter login, google login, google plus, facebook, twitter, social login, social media
 Requires at least: 2.0.2
 Tested up to: 3.8.1
 Stable tag: 2.1.3
