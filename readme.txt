@@ -27,6 +27,8 @@ There is a PRO version of this plugin that supports login with <strong>Facebook<
 
 * The PRO version also comes with a content restriction Addon. Content of Pages and Posts can be hidden from visitors of your site.
 * Content Restriction can be applied from post edit page.
+* Use Shortcode to use the plugin in post or page.
+* Easy css implementation from admin panel.
 
 == Installation ==
 
