@@ -4,6 +4,7 @@ class login_wid extends WP_Widget {
 	
 	public function __construct() {
 		add_action( 'wp_enqueue_scripts', array( $this, 'register_plugin_styles' ) );
+		add_action( 'wp_head', array( $this, 'custom_styles_afo' ) );
 		parent::__construct(
 	 		'login_wid',
 			'Login Widget AFO',
@@ -66,12 +67,11 @@ class login_wid extends WP_Widget {
 		<form name="login" id="login" method="post" action="">
 		<input type="hidden" name="option" value="afo_user_login" />
 		<input type="hidden" name="redirect" value="<?php echo $redirect; ?>" />
-			<ul style="list-style-type:none;">
+			<ul class="login_wid">
 			<li>Username</li>
 			<li><input type="text" name="user_username" required="required"/></li>
 			<li>Password</li>
 			<li><input type="password" name="user_password" required="required"/></li>
-			<li>&nbsp;</li>
 			<li><input name="login" type="submit" value="Login" /></li>
 			</ul>
 		</form>
@@ -108,6 +108,12 @@ class login_wid extends WP_Widget {
 	
 	public function register_plugin_styles() {
 		wp_enqueue_style( 'style_login_widget', plugins_url( 'login-sidebar-widget/style_login_widget.css' ) );
+	}
+	
+	public function custom_styles_afo(){
+		echo '<style>';
+			echo get_option('custom_style_afo');
+		echo '</style>';
 	}
 	
 	public function load_script(){?>

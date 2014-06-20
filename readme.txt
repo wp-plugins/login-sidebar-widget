@@ -1,10 +1,10 @@
 === Login Widget With Shortcode ===
 Contributors: avimegladon
-Donate link: http://donateafo.net84.net/
-Tags: login, widget, login widget, widget login, sidebar login, login form, user login, authentication, facebook login, twitter login, google login, google plus, facebook, twitter, social login, social media
+Donate link: http://aviplugins.com/donate/
+Tags: login, widget, login widget, widget login, sidebar login, login form, user login, authentication, facebook login, twitter login, google login, google plus, facebook, twitter, social login, social media, facebook comments, fb comment
 Requires at least: 2.0.2
 Tested up to: 3.8.1
-Stable tag: 2.1.3
+Stable tag: 2.2.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -22,13 +22,14 @@ This is a simple login form in the widget. This will allow users to login to the
 * Choose redirect page after logout.
 * Choose user profile page.
 
+= Facebook Comments Add On =
+This Addon can be used to replace the default Wordpress Comments and insert a Facebook Comments System. You can get it <a href="http://aviplugins.com/fb-comments-afo-addon" target="_blank">here</a> in <strong>USD 1.00</strong>
+
 = Facebook Login Widget (PRO) =
 There is a PRO version of this plugin that supports login with <strong>Facebook</strong>, <strong>Google</strong> And <strong>Twitter</strong>. You can get it <a href="http://aviplugins.com/fb-login-widget-pro/" target="_blank">here</a> in <strong>USD 1.00</strong>
 
 * The PRO version also comes with a content restriction Addon. Content of Pages and Posts can be hidden from visitors of your site.
 * Content Restriction can be applied from post edit page.
-* Use Shortcode to display login form in post or page.
-* Easy css implementation from admin panel.
 
 == Installation ==
 
@@ -61,6 +62,9 @@ There is a PRO version of this plugin that supports login with <strong>Facebook<
 
 
 == Changelog ==
+
+= 2.2.3 =
+* Added support for css.
 
 = 2.1.3 =
 * Modified error message display.
