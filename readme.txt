@@ -23,7 +23,7 @@ This is a simple login form in the widget. This will allow users to login to the
 * Choose user profile page.
 
 = Facebook Comments Add On =
-This Addon can be used to replace the default Wordpress Comments and insert a Facebook Comments System. You can get it <a href="http://aviplugins.com/fb-comments-afo-addon" target="_blank">here</a> in <strong>USD 1.00</strong>
+This Addon can be used to replace the default Wordpress Comments and insert a Facebook Comments System. The addon supports comments in different languages. Language can be selected from settings page. You can get it <a href="http://aviplugins.com/fb-comments-afo-addon" target="_blank">here</a> in <strong>USD 1.00</strong>
 
 = Facebook Login Widget (PRO) =
 There is a PRO version of this plugin that supports login with <strong>Facebook</strong>, <strong>Google</strong> And <strong>Twitter</strong>. You can get it <a href="http://aviplugins.com/fb-login-widget-pro/" target="_blank">here</a> in <strong>USD 1.00</strong>
@@ -59,7 +59,7 @@ There is a PRO version of this plugin that supports login with <strong>Facebook<
 1. front end sidebar view
 2. settings page view
 3. widget view
-
+4. facebook comments addon view
 
 == Changelog ==
 

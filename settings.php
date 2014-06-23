@@ -159,6 +159,14 @@ class login_settings {
 	  	<td></td>
 		<td>Check this to automatically replace WordPress comments form to FB Comments.</td>
 	  </tr>
+	   <tr>
+		<td><strong>Language</strong></td>
+		<td><select name="fb_comments_language">
+			<option value=""> -- </option>
+			<?php echo $fb_comment_addon->language_selected($fb_comments_language);?>
+		</select>
+		</td>
+	  </tr>
 	 <tr>
 		<td><strong>Color Scheme</strong></td>
 		<td><select name="fb_comments_color_scheme">
