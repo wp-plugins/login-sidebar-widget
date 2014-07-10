@@ -151,6 +151,7 @@ class login_settings {
 	  <tr>
 		<td colspan="2"><h1>Facebook Comments Settings</h1></td>
 	  </tr>
+	  <?php do_action('fb_comments_settings_top');?>
 	  <tr>
 		<td><strong>Replace WP Comments</strong></td>
 		<td><input type="checkbox" name="replace_wp_comments" value="Yes" <?php echo $replace_wp_comments == 'Yes'?'checked="checked" ':'';?>/></td>
@@ -182,6 +183,7 @@ class login_settings {
 		<td><strong>No of Comments</strong></td>
 		<td><input type="text" name="fb_comments_no" value="<?php echo $fb_comments_no;?>"/> Default is 10</td>
 	  </tr>
+	  <?php do_action('fb_comments_settings_bottom');?>
 	  <tr>
 		<td>&nbsp;</td>
 		<td><input type="submit" name="submit" value="Save" class="button button-primary button-large" /></td>
