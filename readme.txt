@@ -21,7 +21,7 @@ This is a simple login form in the widget. This will allow users to login to the
 * You can choose the redirect page after login.
 * Choose redirect page after logout.
 * Choose user profile page.
-
+* Easy css implementation from admin panel.
 
 = Facebook Login Widget (PRO) =
 There is a PRO version of this plugin that supports login with <strong>Facebook</strong>, <strong>Google</strong>,  <strong>Twitter</strong> and <strong>LinkedIn</strong>. You can get it <a href="http://aviplugins.com/fb-login-widget-pro/" target="_blank">here</a> in <strong>USD 1.50</strong>
