@@ -38,8 +38,7 @@ This Addon can be used to replace the default Wordpress Comments and insert a Fa
 * Disqus comments.
 * Globally turn off comments.
 
-= Get Quote =
-Get a <a href="http://aviplugins.com/get-quote.php">quote</a> for creating a Custom Plugin, for Customizing a Plugin and for customizing wordpress themes.
+> Get a <a href="http://aviplugins.com/get-quote.php">quote</a> for creating a <strong>Custom</strong> Plugin.
 
 == Installation ==
 
@@ -51,9 +50,6 @@ Get a <a href="http://aviplugins.com/get-quote.php">quote</a> for creating a Cus
 5. You can also use shortcodes to insert login form in post or pages. [login_widget title="Login Here"]
 5. Now visit your blog and you will see the login form section.
 
-= Get Quote =
-Get a <a href="http://aviplugins.com/get-quote.php">quote</a> for creating a Custom Plugin, for Customizing a Plugin and for customizing wordpress themes.
-
 
 == Frequently Asked Questions ==
 
@@ -61,10 +57,6 @@ Get a <a href="http://aviplugins.com/get-quote.php">quote</a> for creating a Cus
 
 1. Please email me avi.megladon@gmail.com. My site is http://avifoujdar.wordpress.com/contact/ 
 2. Or you can write comments directly to my plugins page. Please visit here http://avifoujdar.wordpress.com/2014/02/13/login-widget/
-
-= Get Quote =
-Get a <a href="http://aviplugins.com/get-quote.php">quote</a> for creating a Custom Plugin, for Customizing a Plugin and for customizing wordpress themes.
-
 
 == Screenshots ==
 
