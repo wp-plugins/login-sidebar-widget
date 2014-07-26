@@ -4,7 +4,7 @@ Donate link: http://aviplugins.com/donate/
 Tags: login, widget, login widget, widget login, sidebar login, login form, user login, authentication, facebook login, twitter login, google login, google plus, facebook, twitter, social login, social media, facebook comments, fb comment
 Requires at least: 2.0.2
 Tested up to: 3.8.1
-Stable tag: 2.2.3
+Stable tag: 2.2.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -66,6 +66,9 @@ This Addon can be used to replace the default Wordpress Comments and insert a Fa
 4. facebook comments addon view
 
 == Changelog ==
+
+= 2.2.4 =
+* admin menu related bug fixed.
 
 = 2.2.3 =
 * Added support for css.

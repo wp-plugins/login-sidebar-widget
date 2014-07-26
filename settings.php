@@ -206,7 +206,7 @@ class login_settings {
 	}
 	
 	function login_widget_afo_menu () {
-		add_options_page( 'Login Widget', 'Login Widget Settings', 1, 'login_widget_afo', array( $this,'login_widget_afo_options' ));
+		add_options_page( 'Login Widget', 'Login Widget Settings', 10, 'login_widget_afo', array( $this,'login_widget_afo_options' ));
 	}
 	
 	function load_settings(){
