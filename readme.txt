@@ -70,7 +70,6 @@ This Addon can be used to replace the default Wordpress Comments and insert a Fa
 
 == Changelog ==
 
-
 = 3.1.1 =
 * Localization is added.
 
