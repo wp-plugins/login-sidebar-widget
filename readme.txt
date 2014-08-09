@@ -4,7 +4,7 @@ Donate link: http://aviplugins.com/donate/
 Tags: login, widget, login widget, widget login, sidebar login, login form, user login, authentication, facebook login, twitter login, google login, google plus, facebook, twitter, social login, social media, facebook comments, fb comment
 Requires at least: 2.0.2
 Tested up to: 3.8.1
-Stable tag: 2.2.4
+Stable tag: 3.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -58,6 +58,9 @@ This Addon can be used to replace the default Wordpress Comments and insert a Fa
 1. Please email me avi.megladon@gmail.com. My site is http://avifoujdar.wordpress.com/contact/ 
 2. Or you can write comments directly to my plugins page. Please visit here http://avifoujdar.wordpress.com/2014/02/13/login-widget/
 
+* If you want to translate the plugin in your language please translate the sample .PO file and mail me the the file at demoforafo@gmail.com and I will include that in the language file. Sample .PO file can be downloaded from <a href="http://aviplugins.com/language-sample/lwa-es_ES.po">here</a>
+
+
 == Screenshots ==
 
 1. front end sidebar view
@@ -66,6 +69,10 @@ This Addon can be used to replace the default Wordpress Comments and insert a Fa
 4. facebook comments addon view
 
 == Changelog ==
+
+
+= 3.1.1 =
+* Localization is added.
 
 = 2.2.4 =
 * admin menu related bug fixed.

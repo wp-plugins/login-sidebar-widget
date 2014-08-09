@@ -8,7 +8,7 @@ class login_wid extends WP_Widget {
 		parent::__construct(
 	 		'login_wid',
 			'Login Widget AFO',
-			array( 'description' => __( 'This is a simple login form in the widget.', 'text_domain' ), )
+			array( 'description' => __( 'This is a simple login form in the widget.', 'lwa' ), )
 		);
 	 }
 
@@ -68,11 +68,11 @@ class login_wid extends WP_Widget {
 		<input type="hidden" name="option" value="afo_user_login" />
 		<input type="hidden" name="redirect" value="<?php echo $redirect; ?>" />
 			<ul class="login_wid">
-			<li>Username</li>
+			<li><?php _e('Username','lwa');?></li>
 			<li><input type="text" name="user_username" required="required"/></li>
-			<li>Password</li>
+			<li><?php _e('Password','lwa');?></li>
 			<li><input type="password" name="user_password" required="required"/></li>
-			<li><input name="login" type="submit" value="Login" /></li>
+			<li><input name="login" type="submit" value="<?php _e('Login','lwa');?>" /></li>
 			</ul>
 		</form>
 		<?php 
@@ -81,13 +81,13 @@ class login_wid extends WP_Widget {
      	get_currentuserinfo();
 		
 		if($link_in_username){
-			$link_with_username = '<a href="'.get_permalink($link_in_username).'">Howdy, '.$current_user->display_name.'</a>';
+			$link_with_username = '<a href="'.get_permalink($link_in_username).'">'.__('Howdy','lwa').', '.$current_user->display_name.'</a>';
 		} else {
-			$link_with_username = 'Howdy, '.$current_user->display_name;
+			$link_with_username = __('Howdy','lwa').', '.$current_user->display_name;
 		}
 		?>
 		<ul style="list-style-type:none;">
-			<li><?php echo $link_with_username;?> | <a href="<?php echo wp_logout_url( $logout_redirect_page ); ?>" title="Logout">Logout</a></li>
+			<li><?php echo $link_with_username;?> | <a href="<?php echo wp_logout_url( $logout_redirect_page ); ?>" title="<?php _e('Logout','lwa');?>"><?php _e('Logout','lwa');?></a></li>
 		</ul>
 		<?php 
 		}
@@ -139,14 +139,14 @@ function login_validate(){
 			$user = wp_signon( $creds, true );
 			if($user->ID == ""){
 				$_SESSION['msg_class'] = 'error_wid_login';
-				$_SESSION['msg'] = 'Error in login!';
+				$_SESSION['msg'] = __('Error in login!','lwa');
 			} else{
 				wp_redirect( $_POST['redirect'] );
 				exit;
 			}
 		} else {
 			$_SESSION['msg_class'] = 'error_wid_login';
-			$_SESSION['msg'] = 'Username or password is empty!';
+			$_SESSION['msg'] = __('Username or password is empty!','lwa');
 		}
 		
 	}

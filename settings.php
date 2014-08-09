@@ -200,6 +200,9 @@ class login_settings {
 	<?php 
 	}
 	
+	function login_widget_afo_text_domain(){
+		load_plugin_textdomain('lwa', FALSE, basename( dirname( __FILE__ ) ) .'/languages');
+	}
 	
 	function plug_install_afo_fb_login(){
 		update_option( 'custom_style_afo', $this->default_style );
@@ -212,6 +215,7 @@ class login_settings {
 	function load_settings(){
 		add_action( 'admin_menu' , array( $this, 'login_widget_afo_menu' ) );
 		add_action( 'admin_init', array( $this, 'login_widget_afo_save_settings' ) );
+		add_action( 'plugins_loaded',  array( $this, 'login_widget_afo_text_domain' ) );
 		register_activation_hook(__FILE__, array( $this, 'plug_install_afo_fb_login' ) );
 	}
 	
