@@ -50,6 +50,7 @@ This Addon can be used to replace the default Wordpress Comments and insert a Fa
 5. You can also use shortcodes to insert login form in post or pages. [login_widget title="Login Here"]
 5. Now visit your blog and you will see the login form section.
 
+The Serbo-Croatian Language translation file is provided by <a href="http://www.webhostinghub.com" target="_blank">Web Hosting Hub</a> 
 
 == Frequently Asked Questions ==
 
