@@ -40,8 +40,8 @@ This Addon can be used to replace the default Wordpress Comments and insert a Fa
 
 > Get a <a href="http://aviplugins.com/get-quote.php">quote</a> for creating your own custom plugin.
 
-== Installation ==
 
+== Installation ==
 
 1. Upload `login-sidebar-widget.zip` to the `/wp-content/plugins/` directory.
 2. Activate the plugin through the 'Plugins' menu in WordPress.
