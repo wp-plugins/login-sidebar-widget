@@ -5,8 +5,8 @@ Tags: login, widget, login widget, widget login, sidebar login, login form, user
 
 Requires at least: 2.0.2
 
-Tested up to: 3.8.1
-Stable tag: 3.1.1
+Tested up to: 4.0
+Stable tag: 3.8.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -40,8 +40,7 @@ This Addon can be used to replace the default Wordpress Comments and insert a Fa
 * Disqus comments.
 * Globally turn off comments.
 
-> Get a <a href="http://aviplugins.com/get-quote.php">quote</a> for custom plugin.
-
+> Get a <a href="http://aviplugins.com/get-quote.php">quote</a> for creating your own custom plugins.
 
 == Installation ==
 
