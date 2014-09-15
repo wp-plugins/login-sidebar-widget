@@ -6,7 +6,7 @@ Tags: login, widget, login widget, widget login, sidebar login, login form, user
 Requires at least: 2.0.2
 
 Tested up to: 4.0
-Stable tag: 3.1.1
+Stable tag: 3.2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -33,8 +33,6 @@ There is a PRO version of this plugin that supports login with <strong>Facebook<
 * Use Shortcode to display login form in post or page.
 * Easy css implementation from admin panel.
 
-* Please click <a href="http://aviplugins.com/support.php">here</a> for plugin <strong>Support</strong>.
-
 = Facebook Comments Extension =
 This Addon can be used to replace the default Wordpress Comments and insert a Facebook / Disqus Comments system to your site. You can get it <a href="http://aviplugins.com/fb-comments-afo-addon" target="_blank">here</a> in <strong>USD 1.00</strong>
 
@@ -59,9 +57,8 @@ The Serbo-Croatian Language translation file is provided by <a href="http://www.
 
 = For any kind of problem =
 
-Please submit your queries here http://aviplugins.com/support.php
-
-You can write comments directly to my plugins page. Please visit here http://avifoujdar.wordpress.com/2014/02/13/login-widget/
+1. Please email me demoforafo@gmail.com. Contact me http://aviplugins.com/contact.php
+2. Or you can write comments directly to my plugins page. Please visit here http://avifoujdar.wordpress.com/2014/02/13/login-widget/
 
 * If you want to translate the plugin in your language please translate the sample .PO file and mail me the the file at demoforafo@gmail.com and I will include that in the language file. Sample .PO file can be downloaded from <a href="http://aviplugins.com/language-sample/lwa-es_ES.po">here</a>
 
@@ -74,6 +71,10 @@ You can write comments directly to my plugins page. Please visit here http://avi
 4. facebook comments addon view
 
 == Changelog ==
+
+
+= 3.2.1 =
+* Security related bug fixed.
 
 = 3.1.1 =
 * Localization is added.

@@ -30,15 +30,22 @@ class login_settings {
 	}
 	
 	function login_widget_afo_save_settings(){
+		
 		if($_POST['option'] == "login_widget_afo_save_settings"){
-			update_option( 'redirect_page', $_POST['redirect_page'] );
-			update_option( 'logout_redirect_page', $_POST['logout_redirect_page'] );
-			update_option( 'link_in_username', $_POST['link_in_username'] );
+			
+			if ( ! isset( $_POST['login_widget_afo_field'] )  || ! wp_verify_nonce( $_POST['login_widget_afo_field'], 'login_widget_afo_action' ) ) {
+			   wp_die( 'Sorry, your nonce did not verify.' );
+			   exit;
+			} 
+		
+			update_option( 'redirect_page',  sanitize_text_field($_POST['redirect_page']) );
+			update_option( 'logout_redirect_page',  sanitize_text_field($_POST['logout_redirect_page']) );
+			update_option( 'link_in_username',  sanitize_text_field($_POST['link_in_username']) );
 			
 			if($_POST['lead_default_style'] == "Yes"){
-				update_option( 'custom_style_afo', $this->default_style );
+				update_option( 'custom_style_afo', sanitize_text_field($this->default_style) );
 			} else {
-				update_option( 'custom_style_afo', $_POST['custom_style_afo'] );
+				update_option( 'custom_style_afo',  sanitize_text_field($_POST['custom_style_afo']) );
 			}
 		}
 	}
@@ -57,6 +64,7 @@ class login_settings {
 	$this->fb_login_pro_add();
 	?>
 	<form name="f" method="post" action="">
+	<?php wp_nonce_field('login_widget_afo_action','login_widget_afo_field'); ?>
 	<input type="hidden" name="option" value="login_widget_afo_save_settings" />
 	<table width="100%" border="0">
 	  <tr>
