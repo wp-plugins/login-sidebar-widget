@@ -72,6 +72,10 @@ The Serbo-Croatian Language translation file is provided by <a href="http://www.
 
 == Changelog ==
 
+
+= 3.2.1 =
+* Security related bug fixed.
+
 = 3.1.1 =
 * Localization is added.
 
