@@ -40,6 +40,30 @@ class login_wid extends WP_Widget {
 		<?php 
 	}
 	
+	public function add_remember_me(){
+		$login_afo_rem = get_option('login_afo_rem');
+		if($login_afo_rem == 'Yes'){
+			echo '<li class="remember"><input type="checkbox" name="remember" /> '.__('Remember Me','lwa').'</li>';
+		}
+	}
+	
+	public function add_extra_links(){
+		$login_afo_forgot_pass_link = get_option('login_afo_forgot_pass_link');
+		$login_afo_register_link = get_option('login_afo_register_link');
+		if($login_afo_forgot_pass_link or $login_afo_register_link){
+			echo '<li class="extra-links">';
+		}
+		if($login_afo_forgot_pass_link){
+			echo '<a href="'.get_permalink($login_afo_forgot_pass_link).'">'.__('Lost Password?').'</a>';
+		}
+		if($login_afo_register_link){
+			echo ' <a href="'.get_permalink($login_afo_register_link).'">'.__('Register').'</a>';
+		}
+		if($login_afo_forgot_pass_link or $login_afo_register_link){
+			echo '</li>';
+		}
+	}
+	
 	public function loginForm(){
 		if(!session_id()){
 			@session_start();
@@ -72,7 +96,9 @@ class login_wid extends WP_Widget {
 			<li><input type="text" name="user_username" required="required"/></li>
 			<li><?php _e('Password','lwa');?></li>
 			<li><input type="password" name="user_password" required="required"/></li>
+			<?php $this->add_remember_me();?>
 			<li><input name="login" type="submit" value="<?php _e('Login','lwa');?>" /></li>
+			<?php $this->add_extra_links();?>
 			</ul>
 		</form>
 		<?php 
@@ -134,7 +160,11 @@ function login_validate(){
 			$creds = array();
 			$creds['user_login'] = $_POST['user_username'];
 			$creds['user_password'] = $_POST['user_password'];
-			$creds['remember'] = true;
+			if($_POST['remember'] == 'Yes'){
+				$creds['remember'] = true;
+			} else {
+				$creds['remember'] = false;
+			}
 		
 			$user = wp_signon( $creds, true );
 			if($user->ID == ""){

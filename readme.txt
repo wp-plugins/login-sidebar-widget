@@ -1,12 +1,12 @@
 === Login Widget With Shortcode ===
 Contributors: avimegladon
 Donate link: http://aviplugins.com/donate/
-Tags: login, widget, login widget, widget login, sidebar login, login form, user login, authentication, facebook login, twitter login, google login, google plus, facebook, twitter, social login, social media, facebook comments, fb comment
+Tags: login, widget, login widget, widget login, sidebar login, login form, user login, authentication, facebook login, twitter login, google login, google plus, facebook, twitter, social login, social media, facebook comments, fb comment, forgot password, reset password
 
 Requires at least: 2.0.2
 
 Tested up to: 4.0
-Stable tag: 3.2.1
+Stable tag: 4.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -20,6 +20,7 @@ This is a simple login form in the widget. This will allow users to login to the
 * Add css as you prefer because the form structure is really very simple.
 
 = Other Optional Options =
+* Custom forgot password form. Use shortcode to display forgot password form in your post or page.
 * You can choose the redirect page after login.
 * Choose redirect page after logout.
 * Choose user profile page.
@@ -40,7 +41,7 @@ This Addon can be used to replace the default Wordpress Comments and insert a Fa
 * Disqus comments.
 * Globally turn off comments.
 
-> Get a <a href="http://aviplugins.com/get-quote.php">quote</a> for creating your own custom plugins.
+> Checkout other plugins <a href="http://aviplugins.com/wp-register-profile-pro/">WP Register Profile</a>, <a href="http://aviplugins.com/custom-post-type-attachment-pro/">Post Type Attachment</a>, <a href="http://aviplugins.com/contact-form-with-shortcode-pro/">Newsletter Subscription</a>.
 
 == Installation ==
 
@@ -68,10 +69,13 @@ The Serbo-Croatian Language translation file is provided by <a href="http://www.
 1. front end sidebar view
 2. settings page view
 3. widget view
-4. facebook comments addon view
+4. Forgot password form
+5. facebook comments addon view
 
 == Changelog ==
 
+= 4.0.0 =
+* forgot password functionality added.
 
 = 3.2.1 =
 * Security related bug fixed.

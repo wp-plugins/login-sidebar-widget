@@ -1,11 +1,6 @@
 <?php
 class login_settings {
 
-	static $title = 'Login Widget AFO Settings';
-	static $login_redirect_page = 'Login Redirect Page:';
-	static $logout_redirect_page = 'Logout Redirect Page:';
-	static $link_in_username = 'Link in Username';
-	
 	private $default_style = '
 	.login_wid{
 		list-style-type:none;
@@ -41,6 +36,9 @@ class login_settings {
 			update_option( 'redirect_page',  sanitize_text_field($_POST['redirect_page']) );
 			update_option( 'logout_redirect_page',  sanitize_text_field($_POST['logout_redirect_page']) );
 			update_option( 'link_in_username',  sanitize_text_field($_POST['link_in_username']) );
+			update_option( 'login_afo_rem',  sanitize_text_field($_POST['login_afo_rem']) );
+			update_option( 'login_afo_forgot_pass_link',  sanitize_text_field($_POST['login_afo_forgot_pass_link']) );
+			update_option( 'login_afo_register_link',  sanitize_text_field($_POST['login_afo_register_link']) );
 			
 			if($_POST['lead_default_style'] == "Yes"){
 				update_option( 'custom_style_afo', sanitize_text_field($this->default_style) );
@@ -56,6 +54,9 @@ class login_settings {
 	$redirect_page = get_option('redirect_page');
 	$logout_redirect_page = get_option('logout_redirect_page');
 	$link_in_username = get_option('link_in_username');
+	$login_afo_rem = get_option('login_afo_rem');
+	$login_afo_forgot_pass_link = get_option('login_afo_forgot_pass_link');
+	$login_afo_register_link = get_option('login_afo_register_link');
 	
 	$custom_style_afo = get_option('custom_style_afo');
 	
@@ -68,11 +69,11 @@ class login_settings {
 	<input type="hidden" name="option" value="login_widget_afo_save_settings" />
 	<table width="100%" border="0">
 	  <tr>
-		<td width="45%"><h1><?php echo self::$title?></h1></td>
+		<td width="45%"><h1>Login Widget AFO Settings</h1></td>
 		<td width="55%">&nbsp;</td>
 	  </tr>
 	  <tr>
-		<td><strong><?php echo self::$login_redirect_page?></strong></td>
+		<td><strong>Login Redirect Page:</strong></td>
 		<td><?php
 				$args = array(
 				'depth'            => 0,
@@ -87,7 +88,7 @@ class login_settings {
 	  </tr>
 	  
 	   <tr>
-		<td><strong><?php echo self::$logout_redirect_page?></strong></td>
+		<td><strong>Logout Redirect Page:</strong></td>
 		 <td><?php
 				$args1 = array(
 				'depth'            => 0,
@@ -102,7 +103,7 @@ class login_settings {
 	  </tr>
 	   
 	  <tr>
-		<td><strong><?php echo self::$link_in_username?></strong></td>
+		<td><strong>Link in Username</strong></td>
 		<td><?php
 				$args2 = array(
 				'depth'            => 0,
@@ -115,7 +116,44 @@ class login_settings {
 				wp_dropdown_pages( $args2 ); 
 			?></td>
 	  </tr>
-	 
+	  <tr>
+		<td><strong>Add Remember Me</strong></td>
+		<td><input type="checkbox" name="login_afo_rem" value="Yes" <?php echo $login_afo_rem == 'Yes'?'checked="checked"':'';?> /></td>
+	  </tr>
+	  <tr>
+		<td><strong>Forgot Password Link</strong></td>
+		<td>
+			<?php
+				$args3 = array(
+				'depth'            => 0,
+				'selected'         => $login_afo_forgot_pass_link,
+				'echo'             => 1,
+				'show_option_none' => '-',
+				'id' 			   => 'login_afo_forgot_pass_link',
+				'name'             => 'login_afo_forgot_pass_link'
+				);
+				wp_dropdown_pages( $args3 ); 
+			?>
+			<i>Leave blank to not include the link</i>
+			</td>
+	  </tr>
+	  <tr>
+		<td><strong>Register Link</strong></td>
+		<td>
+			<?php
+				$args4 = array(
+				'depth'            => 0,
+				'selected'         => $login_afo_register_link,
+				'echo'             => 1,
+				'show_option_none' => '-',
+				'id' 			   => 'login_afo_register_link',
+				'name'             => 'login_afo_register_link'
+				);
+				wp_dropdown_pages( $args4 ); 
+			?>
+			<i>Leave blank to not include the link</i>
+			</td>
+	  </tr>
 	   <tr>
 			<td width="45%"><h1>Styling</h1></td>
 			<td width="55%">&nbsp;</td>
@@ -138,6 +176,10 @@ class login_settings {
 	  <tr>
 		<td colspan="2">Use <span style="color:#000066;">[login_widget]</span> shortcode to display login form in post or page.<br />
 		 Example: <span style="color:#000066;">[login_widget title="Login Here"]</span></td>
+	  </tr>
+	  <tr>
+		<td colspan="2">Use <span style="color:#000066;">[forgot_password]</span> shortcode to display forgot password form in post or page.<br />
+		 Example: <span style="color:#000066;">[forgot_password title="Forgot Password?"]</span></td>
 	  </tr>
 	</table>
 	</form>
