@@ -78,7 +78,9 @@ The Serbo-Croatian Language translation file is provided by <a href="http://www.
 * forgot password functionality added.
 
 = 3.2.1 =
-* Security related bug fixed.
+* Security related bug fixed. 
+
+Advisory https://security.dxw.com/advisories/csrfxss-vulnerablity-in-login-widget-with-shortcode-allows-unauthenticated-attackers-to-do-anything-an-admin-can-do/
 
 = 3.1.1 =
 * Localization is added.
