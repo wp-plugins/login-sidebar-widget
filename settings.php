@@ -58,7 +58,7 @@ class login_settings {
 	$login_afo_forgot_pass_link = get_option('login_afo_forgot_pass_link');
 	$login_afo_register_link = get_option('login_afo_register_link');
 	
-	$custom_style_afo = get_option('custom_style_afo');
+	$custom_style_afo = stripslashes(get_option('custom_style_afo'));
 	
 	$this->donate_form_login();
 	$this->fb_comment_addon_add();

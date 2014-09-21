@@ -138,7 +138,7 @@ class login_wid extends WP_Widget {
 	
 	public function custom_styles_afo(){
 		echo '<style>';
-			echo get_option('custom_style_afo');
+			echo stripslashes(get_option('custom_style_afo'));
 		echo '</style>';
 	}
 	
