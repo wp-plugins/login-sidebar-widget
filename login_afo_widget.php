@@ -171,6 +171,7 @@ function login_validate(){
 				$_SESSION['msg_class'] = 'error_wid_login';
 				$_SESSION['msg'] = __('Error in login!','lwa');
 			} else{
+				wp_set_auth_cookie($user->ID);
 				wp_redirect( $_POST['redirect'] );
 				exit;
 			}
