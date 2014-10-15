@@ -58,7 +58,7 @@ The Serbo-Croatian Language translation file is provided by <a href="http://www.
 
 = For any kind of problem =
 
-1. Please email me demoforafo@gmail.com. Contact me http://aviplugins.com/contact.php
+1. Please email me demoforafo@gmail.com. Contact me at http://aviplugins.com/contact.php
 2. Or you can write comments directly to my plugins page. Please visit here http://avifoujdar.wordpress.com/2014/02/13/login-widget/
 
 * If you want to translate the plugin in your language please translate the sample .PO file and mail me the the file at demoforafo@gmail.com and I will include that in the language file. Sample .PO file can be downloaded from <a href="http://aviplugins.com/language-sample/lwa-es_ES.po">here</a>
