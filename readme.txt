@@ -18,6 +18,7 @@ This is a simple login form in the widget. This will allow users to login to the
 * just install the plugin and add the login widget in the sidebar. 
 * Change some 'optional' settings in `Settings-> Login Widget Settings` and you are good to go. 
 * Add css as you prefer because the form structure is really very simple.
+* Use this shortcode [forgot_password] in your page to display the forgot password form. Forgot password link can be added to login widget from plugin settings page.
 
 = Other Optional Options =
 * Custom forgot password form. Use shortcode to display forgot password form in your post or page.
