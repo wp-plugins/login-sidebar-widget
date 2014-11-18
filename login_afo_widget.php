@@ -151,7 +151,7 @@ class login_wid extends WP_Widget {
 } 
 
 function login_validate(){
-	if($_POST['option'] == "afo_user_login"){
+	if( isset($_POST['option']) and $_POST['option'] == "afo_user_login"){
 		if(!session_id()){
 			session_start();
 		}

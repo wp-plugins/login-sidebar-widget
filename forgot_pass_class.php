@@ -82,7 +82,7 @@ function forgot_pass_validate(){
 		}
 }
 
-	if($_POST['option'] == "afo_forgot_pass"){
+	if(isset($_POST['option']) and $_POST['option'] == "afo_forgot_pass"){
 	
 		global $wpdb;
 		$msg = '';

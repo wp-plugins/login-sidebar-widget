@@ -76,6 +76,9 @@ The Serbo-Croatian Language translation file is provided by <a href="http://www.
 
 == Changelog ==
 
+= 4.1.0 =
+* Plugin notice message bug fixed.
+
 = 4.0.0 =
 * forgot password functionality added.
 

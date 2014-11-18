@@ -26,7 +26,7 @@ class login_settings {
 	
 	function login_widget_afo_save_settings(){
 		
-		if($_POST['option'] == "login_widget_afo_save_settings"){
+		if(isset($_POST['option']) and $_POST['option'] == "login_widget_afo_save_settings"){
 			
 			if ( ! isset( $_POST['login_widget_afo_field'] )  || ! wp_verify_nonce( $_POST['login_widget_afo_field'], 'login_widget_afo_action' ) ) {
 			   wp_die( 'Sorry, your nonce did not verify.' );
@@ -40,7 +40,7 @@ class login_settings {
 			update_option( 'login_afo_forgot_pass_link',  sanitize_text_field($_POST['login_afo_forgot_pass_link']) );
 			update_option( 'login_afo_register_link',  sanitize_text_field($_POST['login_afo_register_link']) );
 			
-			if($_POST['lead_default_style'] == "Yes"){
+			if(isset($_POST['load_default_style']) and $_POST['load_default_style'] == "Yes"){
 				update_option( 'custom_style_afo', sanitize_text_field($this->default_style) );
 			} else {
 				update_option( 'custom_style_afo',  sanitize_text_field($_POST['custom_style_afo']) );
@@ -159,7 +159,7 @@ class login_settings {
 			<td width="55%">&nbsp;</td>
 		  </tr>
 	   <tr>
-			<td valign="top"><input type="checkbox" name="lead_default_style" value="Yes" /><strong> Load Default Styles</strong><br />
+			<td valign="top"><input type="checkbox" name="load_default_style" value="Yes" /><strong> Load Default Styles</strong><br />
 			Check this and hit the save button to go back to default styling.
 			</td>
 			<td><textarea name="custom_style_afo" style="width:80%; height:200px;"><?php echo $custom_style_afo;?></textarea></td>
@@ -259,7 +259,7 @@ class login_settings {
 	}
 	
 	function login_widget_afo_menu () {
-		add_options_page( 'Login Widget', 'Login Widget Settings', 10, 'login_widget_afo', array( $this,'login_widget_afo_options' ));
+		add_options_page( 'Login Widget', 'Login Widget Settings', 'activate_plugins', 'login_widget_afo', array( $this,'login_widget_afo_options' ));
 	}
 	
 	function load_settings(){
