@@ -35,6 +35,7 @@ There is a PRO version of this plugin that supports login with <strong>Facebook<
 * Use Shortcode to display login form in post or page.
 * Manage Forgot Password Email Body.
 * Easy css implementation from admin panel.
+* Other useful settings.
 
 = Facebook Comments Extension =
 This Addon can be used to replace the default Wordpress Comments and insert Facebook / Disqus Comments system to your site. You can get it <a href="http://aviplugins.com/fb-comments-afo-addon" target="_blank">here</a> in <strong>USD 1.00</strong>
@@ -43,7 +44,7 @@ This Addon can be used to replace the default Wordpress Comments and insert Face
 * Disqus comments.
 * Globally turn off comments.
 
-> Checkout other plugins <a href="http://aviplugins.com/wp-register-profile-pro/">WP Register Profile</a>, <a href="http://aviplugins.com/custom-post-type-attachment-pro/">Post Type Attachment</a>, <a href="http://aviplugins.com/contact-form-with-shortcode-pro/">Newsletter Subscription</a>, <a href="http://aviplugins.com/wp-support-pro/">WP Support (PRO)</a>, <a href="http://aviplugins.com/wp-ecommerce-wishlist/">WP Ecommerce Wishlist</a>.
+> Checkout other plugins <a href="http://aviplugins.com/fb-login-widget-pro/">Facebook Login Widget (PRO)</a>, <a href="http://aviplugins.com/wp-register-profile-pro/">WP Register Profile</a>, <a href="http://aviplugins.com/custom-post-type-attachment-pro/">Post Type Attachment</a>, <a href="http://aviplugins.com/contact-form-with-shortcode-pro/">Newsletter Subscription</a>, <a href="http://aviplugins.com/wp-support-pro/">WP Support (PRO)</a>, <a href="http://aviplugins.com/wp-ecommerce-wishlist/">WP Ecommerce Wishlist</a>.
 
 == Installation ==
 
