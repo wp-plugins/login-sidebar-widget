@@ -63,11 +63,12 @@ class login_settings {
 	$this->donate_form_login();
 	$this->fb_comment_addon_add();
 	$this->fb_login_pro_add();
+	$this->help_support();
 	?>
 	<form name="f" method="post" action="">
 	<?php wp_nonce_field('login_widget_afo_action','login_widget_afo_field'); ?>
 	<input type="hidden" name="option" value="login_widget_afo_save_settings" />
-	<table width="100%" border="0">
+	<table width="98%" style="background-color:#FFFFFF; border:1px solid #CCCCCC; padding:0px 0px 0px 10px; margin:2px;">
 	  <tr>
 		<td width="45%"><h1>Login Widget AFO Settings</h1></td>
 		<td width="55%">&nbsp;</td>
@@ -269,6 +270,15 @@ class login_settings {
 		register_activation_hook(__FILE__, array( $this, 'plug_install_afo_fb_login' ) );
 	}
 	
+	function help_support(){ ?>
+	<table width="98%" border="0" style="background-color:#FFFFFF; border:1px solid #CCCCCC; padding:0px 0px 0px 10px; margin:2px;">
+	  <tr>
+		<td align="right"><a href="http://aviplugins.com/support.php" target="_blank">Help and Support</a></td>
+	  </tr>
+	</table>
+	<?php
+	}
+	
 	function fb_comment_addon_add(){ 
 		if ( !is_plugin_active( 'fb-comments-afo-addon/fb_comment.php' ) ) {
 	?>
@@ -284,7 +294,7 @@ class login_settings {
 	function fb_login_pro_add(){ ?>
 	<table width="98%" border="0" style="background-color:#FFFFD2; border:1px solid #E6DB55; padding:0px 0px 0px 10px; margin:2px;">
   <tr>
-    <td><p>There is a PRO version of this plugin that supports login with <strong>Facebook</strong>, <strong>Google</strong>,  <strong>Twitter</strong> and <strong>LinkedIn</strong>. You can get it <a href="http://aviplugins.com/fb-login-widget-pro/" target="_blank">here</a> in <strong>USD 4.00</strong> </p></td>
+    <td><p>There is a PRO version of this plugin that supports login with <strong>Facebook</strong>, <strong>Google</strong>,  <strong>Twitter</strong> and <strong>LinkedIn</strong>. You can get it <a href="http://aviplugins.com/fb-login-widget-pro/" target="_blank">here</a> in <strong>USD 3.00</strong> </p></td>
   </tr>
 </table>
 	<?php }
