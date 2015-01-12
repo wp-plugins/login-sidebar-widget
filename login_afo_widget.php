@@ -43,7 +43,7 @@ class login_wid extends WP_Widget {
 	public function add_remember_me(){
 		$login_afo_rem = get_option('login_afo_rem');
 		if($login_afo_rem == 'Yes'){
-			echo '<li class="remember"><input type="checkbox" name="remember" /> '.__('Remember Me','lwa').'</li>';
+			echo '<li class="remember"><input type="checkbox" name="remember" value="Yes" /> '.__('Remember Me','lwa').'</li>';
 		}
 	}
 	
