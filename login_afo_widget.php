@@ -161,17 +161,17 @@ function login_validate(){
 			$creds['user_login'] = $_POST['user_username'];
 			$creds['user_password'] = $_POST['user_password'];
 			if($_POST['remember'] == 'Yes'){
-				$creds['remember'] = true;
+				$remember = true;
 			} else {
-				$creds['remember'] = false;
+				$remember = false;
 			}
-		
+			$creds['remember'] = $remember;
 			$user = wp_signon( $creds, true );
 			if($user->ID == ""){
 				$_SESSION['msg_class'] = 'error_wid_login';
 				$_SESSION['msg'] = __('Error in login!','lwa');
 			} else{
-				wp_set_auth_cookie($user->ID);
+				wp_set_auth_cookie($user->ID, $remember);
 				wp_redirect( $_POST['redirect'] );
 				exit;
 			}
