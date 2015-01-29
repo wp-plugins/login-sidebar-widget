@@ -40,7 +40,7 @@ Click <a href="http://aviplugins.com/demo/login/" target="_blank">here</a> to se
 * And Other useful settings.
 
 = Facebook Comments Extension =
-This Addon can be used to replace the default Wordpress Comments and insert Facebook / Disqus Comments system to your site. You can get it <a href="http://aviplugins.com/fb-comments-afo-addon" target="_blank">here</a> in <strong>USD 1.00</strong>
+This Add-on can be used to replace the default Wordpress Comments and insert Facebook / Disqus Comments system in  your site. You can get it <a href="http://aviplugins.com/fb-comments-afo-addon" target="_blank">here</a> in <strong>USD 1.00</strong>
 
 * Facebook comments.
 * Disqus comments.
