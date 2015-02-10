@@ -6,7 +6,7 @@ Tags: login, widget, login widget, widget login, sidebar login, login form, user
 Requires at least: 2.0.2
 
 Tested up to: 4.1
-Stable tag: 4.2.1
+Stable tag: 4.2.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -78,6 +78,9 @@ The Serbo-Croatian Language translation file is provided by <a href="http://www.
 5. facebook comments addon view
 
 == Changelog ==
+
+= 4.2.2 =
+* Login and Logout page redirection modified.
 
 = 4.2.1 =
 * Remember me issue fixed.
