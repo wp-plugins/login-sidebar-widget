@@ -5,7 +5,7 @@ Tags: login, widget, login widget, widget login, sidebar login, login form, user
 
 Requires at least: 2.0.2
 
-Tested up to: 4.1
+Tested up to: 4.1.1
 Stable tag: 4.2.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -35,6 +35,7 @@ Click <a href="http://aviplugins.com/demo/login/" target="_blank">here</a> to se
 * The PRO version also comes with a content restriction Addon. Content of Pages and Posts can be hidden from visitors of your site.
 * Content Restriction can be applied from post edit page.
 * Use Shortcode to display login form in post or page.
+* Update welcome text "Howdy" from plugin settings section.
 * Manage Forgot Password Email Body.
 * Easy css implementation from admin panel.
 * And Other useful settings.
