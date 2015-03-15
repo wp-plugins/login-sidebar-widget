@@ -30,12 +30,13 @@ This is a simple login form in the widget. This will allow users to login to the
 = Facebook Login Widget (PRO) =
 There is a PRO version of this plugin that supports login with <strong>Facebook</strong>, <strong>Google</strong>,  <strong>Twitter</strong> and <strong>LinkedIn</strong>. You can get it <a href="http://aviplugins.com/fb-login-widget-pro/" target="_blank">here</a> in <strong>USD 3.00</strong>
 
-Click <a href="http://aviplugins.com/demo/login/" target="_blank">here</a> to see a demo.
+Click <a href="http://aviplugins.com/demo/login/" target="_blank">here</a> for a Live Demo.
 
 * The PRO version also comes with a content restriction Addon. Content of Pages and Posts can be hidden from visitors of your site.
 * Content Restriction can be applied from post edit page.
 * Use Shortcode to display login form in post or page.
-* Update welcome text "Howdy" from plugin settings section.
+* Use only social icons for logging in. No need to put the entire login form.
+* Change welcome text "Howdy" from plugin settings section.
 * Manage Forgot Password Email Body.
 * Easy css implementation from admin panel.
 * And Other useful settings.
