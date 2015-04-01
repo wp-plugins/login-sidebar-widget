@@ -1,5 +1,5 @@
 === Login Widget With Shortcode ===
-Contributors: aviplugins.com
+Contributors: avimegladon
 Donate link: http://aviplugins.com/donate/
 Tags: login, widget, login widget, widget login, sidebar login, login form, user login, authentication, facebook login, twitter login, google login, google plus, facebook, twitter, social login, social media, facebook comments, fb comment, forgot password, reset password, link
 

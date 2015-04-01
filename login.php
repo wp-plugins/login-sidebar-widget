@@ -4,7 +4,7 @@ Plugin Name: Login Widget With Shortcode
 Plugin URI: http://avifoujdar.wordpress.com/category/my-wp-plugins/
 Description: This is a simple login form in the widget. just install the plugin and add the login widget in the sidebar. Thats it. :)
 Version: 4.2.2
-Author: aviplugins.com
+Author: avimegladon
 Author URI: http://avifoujdar.wordpress.com/
 */
 
