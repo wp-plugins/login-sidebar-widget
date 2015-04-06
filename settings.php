@@ -193,6 +193,7 @@ class login_settings {
 	$fb_comments_color_scheme = get_option('fb_comments_color_scheme');
 	$fb_comments_width = get_option('fb_comments_width');
 	$fb_comments_no = get_option('fb_comments_no');
+	$fb_comments_language = get_option('fb_comments_language');
 	?>
 	<form name="f" method="post" action="">
 	<input type="hidden" name="option" value="save_afo_fb_comment_settings" />
