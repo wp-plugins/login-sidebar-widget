@@ -14,8 +14,8 @@ class afo_forgot_pass_class {
 		<input type="hidden" name="option" value="afo_forgot_pass" />
 			<div class="login_wid forgot_pass">
 				<p class="login_form_group login_wid_password">
-					<label for="user_username"><?php _e('Email','lwa');?></label>
-					<input type="email" name="user_username" required="required"/>
+					<label for="user_email"><?php _e('Email','lwa');?></label>
+					<input type="email" name="user_username" id="user_email" required="required"/>
 				</p>
 				<p class="login_wid_submit">
 					<input name="forgot" type="submit" value="<?php _e('Submit','lwa');?>" /></li>

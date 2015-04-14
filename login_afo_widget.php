@@ -108,11 +108,11 @@ class login_wid extends WP_Widget {
 			<div class="login_wid">
 				<p class="login_form_group login_wid_username">
 					<label for="user_username"><?php _e('Username','lwa');?></label>
-					<input type="text" name="user_username" required="required" placeholder="Username"/>
+					<input type="text" name="user_username" id="user_username" required="required" placeholder="Username"/>
 				</p>
 				<p class="login_form_group login_wid_password">
-					<label for="user_username"><?php _e('Password','lwa');?></label>
-					<input type="password" name="user_password" required="required" placeholder="Password"/>
+					<label for="user_password"><?php _e('Password','lwa');?></label>
+					<input type="password" name="user_password" id="user_password" required="required" placeholder="Password"/>
 				</p>
 			<?php $this->add_remember_me();?>
 			<p class="login_wid_submit">
