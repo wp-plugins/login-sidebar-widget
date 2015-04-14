@@ -1,7 +1,7 @@
 <?php
 
 class login_wid extends WP_Widget {
-	
+
 	public function __construct() {
 		add_action( 'wp_enqueue_scripts', array( $this, 'register_plugin_styles' ) );
 		add_action( 'wp_head', array( $this, 'custom_styles_afo' ) );
@@ -14,9 +14,9 @@ class login_wid extends WP_Widget {
 
 	public function widget( $args, $instance ) {
 		extract( $args );
-		
+
 		$wid_title = apply_filters( 'widget_title', $instance['wid_title'] );
-		
+
 		echo $args['before_widget'];
 		if ( ! empty( $wid_title ) )
 			echo $args['before_title'] . $wid_title . $args['after_title'];
@@ -38,33 +38,33 @@ class login_wid extends WP_Widget {
 		<p><label for="<?php echo $this->get_field_id('wid_title'); ?>"><?php _e('Title:'); ?> </label>
 		<input class="widefat" id="<?php echo $this->get_field_id('wid_title'); ?>" name="<?php echo $this->get_field_name('wid_title'); ?>" type="text" value="<?php echo $wid_title; ?>" />
 		</p>
-		<?php 
+		<?php
 	}
-	
+
 	public function add_remember_me(){
 		$login_afo_rem = get_option('login_afo_rem');
 		if($login_afo_rem == 'Yes'){
-			echo '<li class="remember"><input type="checkbox" name="remember" value="Yes" /> '.__('Remember Me','lwa').'</li>';
+			echo '<p class="remember"><input type="checkbox" name="remember" value="Yes" /> '.__('Remember Me','lwa').'</p>';
 		}
 	}
-	
+
 	public function add_extra_links(){
 		$login_afo_forgot_pass_link = get_option('login_afo_forgot_pass_link');
 		$login_afo_register_link = get_option('login_afo_register_link');
 		if($login_afo_forgot_pass_link or $login_afo_register_link){
-			echo '<li class="extra-links">';
+			echo '<p class="extra-links">';
 		}
 		if($login_afo_forgot_pass_link){
-			echo '<a href="'.get_permalink($login_afo_forgot_pass_link).'">'.__('Lost Password?').'</a>';
+			echo '<a class="lost-password" href="'.get_permalink($login_afo_forgot_pass_link).'">'.__('Lost Password?').'</a>';
 		}
 		if($login_afo_register_link){
-			echo ' <a href="'.get_permalink($login_afo_register_link).'">'.__('Register').'</a>';
+			echo ' <a class="register-link" href="'.get_permalink($login_afo_register_link).'">'.__('Register').'</a>';
 		}
 		if($login_afo_forgot_pass_link or $login_afo_register_link){
-			echo '</li>';
+			echo '</p>';
 		}
 	}
-	
+
 	public function curPageURL() {
 	 $pageURL = 'http';
 	 if (isset($_SERVER["HTTPS"]) and $_SERVER["HTTPS"] == "on") {$pageURL .= "s";}
@@ -86,13 +86,13 @@ class login_wid extends WP_Widget {
 		$redirect_page = get_option('redirect_page');
 		$logout_redirect_page = get_option('logout_redirect_page');
 		$link_in_username = get_option('link_in_username');
-		
+
 		if($redirect_page){
 			$redirect =  get_permalink($redirect_page);
 		} else {
 			$redirect =  $this->curPageURL();
 		}
-		
+
 		if($logout_redirect_page){
 			$logout_redirect_page = get_permalink($logout_redirect_page);
 		} else {
@@ -105,23 +105,29 @@ class login_wid extends WP_Widget {
 		<form name="login" id="login" method="post" action="">
 		<input type="hidden" name="option" value="afo_user_login" />
 		<input type="hidden" name="redirect" value="<?php echo $redirect; ?>" />
-			<ul class="login_wid">
-			<li><?php _e('Username','lwa');?></li>
-			<li><input type="text" name="user_username" required="required"/></li>
-			<li><?php _e('Password','lwa');?></li>
-			<li><input type="password" name="user_password" required="required"/></li>
+			<div class="login_wid">
+				<p class="login_form_group login_wid_username">
+					<label for="user_username"><?php _e('Username','lwa');?></label>
+					<input type="text" name="user_username" required="required" placeholder="Username"/>
+				</p>
+				<p class="login_form_group login_wid_password">
+					<label for="user_username"><?php _e('Password','lwa');?></label>
+					<input type="password" name="user_password" required="required" placeholder="Password"/>
+				</p>
 			<?php $this->add_remember_me();?>
-			<li><input name="login" type="submit" value="<?php _e('Login','lwa');?>" /></li>
+			<p class="login_wid_submit">
+				<button name="login"><?php _e('Login','lwa');?></button>
+			</p>
 			<?php $this->add_extra_links();?>
-			</ul>
+			</div>
 		</form>
-		<?php 
+		<?php
 		} else {
 		global $current_user;
      	get_currentuserinfo();
-		
+
 		if($link_in_username){
-			$link_with_username = '<a href="'.get_permalink($link_in_username).'">'.__('Howdy','lwa').', '.$current_user->display_name.'</a>';
+			$link_with_username = '<a class="link-in-username" href="'.get_permalink($link_in_username).'">'.__('Howdy','lwa').', '.$current_user->display_name.'</a>';
 		} else {
 			$link_with_username = __('Howdy','lwa').', '.$current_user->display_name;
 		}
@@ -129,10 +135,10 @@ class login_wid extends WP_Widget {
 		<ul style="list-style-type:none;">
 			<li><?php echo $link_with_username;?> | <a href="<?php echo wp_logout_url( $logout_redirect_page ); ?>" title="<?php _e('Logout','lwa');?>"><?php _e('Logout','lwa');?></a></li>
 		</ul>
-		<?php 
+		<?php
 		}
 	}
-	
+
 	public function error_message(){
 		if(isset($_SESSION['msg']) and $_SESSION['msg']){
 			echo '<div class="'.$_SESSION['msg_class'].'">'.$_SESSION['msg'].$this->message_close_button().'</div>';
@@ -140,29 +146,29 @@ class login_wid extends WP_Widget {
 			unset($_SESSION['msg_class']);
 		}
 	}
-	
+
 	public function message_close_button(){
 		$cb = '<a href="javascript:void(0);" onclick="closeMessage();" class="close_button_afo">x</a>';
 		return $cb;
 	}
-	
+
 	public function register_plugin_styles() {
 		wp_enqueue_style( 'style_login_widget', plugins_url( 'login-sidebar-widget/style_login_widget.css' ) );
 	}
-	
+
 	public function custom_styles_afo(){
 		echo '<style>';
 			echo stripslashes(get_option('custom_style_afo'));
 		echo '</style>';
 	}
-	
+
 	public function load_script(){?>
 		<script type="text/javascript">
 			function closeMessage(){jQuery('.error_wid_login').hide();}
 		</script>
 	<?php }
-	
-} 
+
+}
 
 function login_validate(){
 	if( isset($_POST['option']) and $_POST['option'] == "afo_user_login"){
@@ -193,7 +199,7 @@ function login_validate(){
 			$_SESSION['msg_class'] = 'error_wid_login';
 			$_SESSION['msg'] = __('Username or password is empty!','lwa');
 		}
-		
+
 	}
 }
 
