@@ -15,10 +15,10 @@ class afo_forgot_pass_class {
 			<div class="login_wid forgot_pass">
 				<p class="login_form_group login_wid_password">
 					<label for="user_email"><?php _e('Email','lwa');?></label>
-					<input type="email" name="user_username" id="user_email" required="required"/>
+					<input type="email" name="user_username" id="user_email" required="required" placeholder="Email Address" />
 				</p>
 				<p class="login_wid_submit">
-					<input name="forgot" type="submit" value="<?php _e('Submit','lwa');?>" /></li>
+					<button name="forgot"><?php _e('Submit','lwa');?></button>
 				</p>
 				<p class="forgot-text">
 					<?php _e('Please enter your email. The password reset link will be provided in your email.','lwa');?>
