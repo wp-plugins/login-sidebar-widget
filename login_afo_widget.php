@@ -44,7 +44,7 @@ class login_wid extends WP_Widget {
 	public function add_remember_me(){
 		$login_afo_rem = get_option('login_afo_rem');
 		if($login_afo_rem == 'Yes'){
-			echo '<li class="remember"><input type="checkbox" name="remember" value="Yes" /> '.__('Remember Me','lwa').'</li>';
+			echo '<li class="remember"><input type="checkbox" name="remember" value="Yes" /><label for="remember"> '.__('Remember Me','lwa').'</label></li>';
 		}
 	}
 	
@@ -106,9 +106,9 @@ class login_wid extends WP_Widget {
 		<input type="hidden" name="option" value="afo_user_login" />
 		<input type="hidden" name="redirect" value="<?php echo $redirect; ?>" />
 			<ul class="login_wid">
-			<li><?php _e('Username','lwa');?></li>
+			<li><label for="username"><?php _e('Username','lwa');?></label></li>
 			<li><input type="text" name="user_username" required="required"/></li>
-			<li><?php _e('Password','lwa');?></li>
+			<li><label for="password"><?php _e('Password','lwa');?></label></li>
 			<li><input type="password" name="user_password" required="required"/></li>
 			<?php $this->add_remember_me();?>
 			<li><input name="login" type="submit" value="<?php _e('Login','lwa');?>" /></li>

@@ -13,7 +13,7 @@ class afo_forgot_pass_class {
 		<form name="forgot" id="forgot" method="post" action="">
 		<input type="hidden" name="option" value="afo_forgot_pass" />
 			<ul class="login_wid forgot_pass">
-				<li><?php _e('Email','lwa');?></li>
+				<li><label for="email"><?php _e('Email','lwa');?></label></li>
 				<li><input type="text" name="user_username" required="required"/></li>
 				<li><input name="forgot" type="submit" value="<?php _e('Submit','lwa');?>" /></li>
 				<li class="forgot-text"><?php _e('Please enter your email. The password reset link will be provided in your email.','lwa');?></li>

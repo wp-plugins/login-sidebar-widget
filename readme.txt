@@ -6,7 +6,7 @@ Tags: login, widget, login widget, widget login, sidebar login, login form, user
 Requires at least: 2.0.2
 
 Tested up to: 4.2.1
-Stable tag: 4.2.3
+Stable tag: 4.2.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -82,6 +82,9 @@ The Serbo-Croatian Language translation file is provided by <a href="http://www.
 5. facebook comments addon view
 
 == Changelog ==
+
+= 4.2.4 =
+* forms structure is updated.
 
 = 4.2.3 =
 * Language selection bug fixed for <a href="http://www.aviplugins.com/fb-comments-afo-addon/">Facebook Comments Add On</a>
