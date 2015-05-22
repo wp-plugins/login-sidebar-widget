@@ -14,7 +14,8 @@ This is a simple login form in the widget. This will allow users to login to the
 
 == Description ==
 
-* This is a simple login form in the widget. 
+* This is a simple login form in the widget.
+* Use this shortcode [login_widget] to use login form in your pages/ posts. 
 * just install the plugin and add the login widget in the sidebar. 
 * Change some 'optional' settings in `Settings-> Login Widget Settings` and you are good to go. 
 * Add css as you prefer because the form structure is really very simple.
