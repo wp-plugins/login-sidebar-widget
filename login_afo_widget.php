@@ -44,24 +44,18 @@ class login_wid extends WP_Widget {
 	public function add_remember_me(){
 		$login_afo_rem = get_option('login_afo_rem');
 		if($login_afo_rem == 'Yes'){
-			echo '<li class="remember"><input type="checkbox" name="remember" value="Yes" /><label for="remember"> '.__('Remember Me','lwa').'</label></li>';
+			echo '<label for="remember"> '.__('Remember Me','lwa').'</label>  <input type="checkbox" name="remember" value="Yes" />';
 		}
 	}
 	
 	public function add_extra_links(){
 		$login_afo_forgot_pass_link = get_option('login_afo_forgot_pass_link');
 		$login_afo_register_link = get_option('login_afo_register_link');
-		if($login_afo_forgot_pass_link or $login_afo_register_link){
-			echo '<li class="extra-links">';
-		}
 		if($login_afo_forgot_pass_link){
-			echo '<a href="'.get_permalink($login_afo_forgot_pass_link).'">'.__('Lost Password?').'</a>';
+			echo '<a href="'.get_permalink($login_afo_forgot_pass_link).'">'.__('Lost Password?','lwa').'</a>';
 		}
 		if($login_afo_register_link){
-			echo ' <a href="'.get_permalink($login_afo_register_link).'">'.__('Register').'</a>';
-		}
-		if($login_afo_forgot_pass_link or $login_afo_register_link){
-			echo '</li>';
+			echo ' | <a href="'.get_permalink($login_afo_register_link).'">'.__('Register','lwa').'</a>';
 		}
 	}
 	
@@ -102,19 +96,27 @@ class login_wid extends WP_Widget {
 		$this->error_message();
 		if(!is_user_logged_in()){
 		?>
+		<div id="log_forms">
 		<form name="login" id="login" method="post" action="">
 		<input type="hidden" name="option" value="afo_user_login" />
 		<input type="hidden" name="redirect" value="<?php echo $redirect; ?>" />
-			<ul class="login_wid">
-			<li><label for="username"><?php _e('Username','lwa');?></label></li>
-			<li><input type="text" name="user_username" required="required"/></li>
-			<li><label for="password"><?php _e('Password','lwa');?></label></li>
-			<li><input type="password" name="user_password" required="required"/></li>
+		<div class="form-group">
+			<label for="username"><?php _e('Username','lwa');?> </label>
+			<input type="text" name="user_username" required="required"/>
+		</div>
+		<div class="form-group">
+			<label for="password"><?php _e('Password','lwa');?> </label>
+			<input type="password" name="user_password" required="required"/>
+		</div>
+		<div class="form-group">
 			<?php $this->add_remember_me();?>
-			<li><input name="login" type="submit" value="<?php _e('Login','lwa');?>" /></li>
+		</div>
+		<div class="form-group"><label for="login">&nbsp;</label><input name="login" type="submit" value="<?php _e('Login','lwa');?>" /></div>
+		<div class="form-group">
 			<?php $this->add_extra_links();?>
-			</ul>
+		</div>
 		</form>
+		</div>
 		<?php 
 		} else {
 		global $current_user;

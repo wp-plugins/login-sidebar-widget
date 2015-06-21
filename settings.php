@@ -2,23 +2,39 @@
 class login_settings {
 
 	private $default_style = '
-	.login_wid{
-		list-style-type:none;
-		border: 1px dashed #999999;
-		width:98%;
-		float:left;
-		padding:2%;
-	}
-	.login_wid li{
-		width:45%;
-		float:left;
-		margin:2px;
-	}
-	.afo_social_login{
-		padding:5px 0px 0px 0px;
-		clear:both;
-		width:100% !important;
-	}';
+	input[type=text],input[type=password]{
+	margin-bottom: 20px;
+	margin-top: 10px;
+	width:100%;
+	padding: 15px;
+	border:1px solid #E3E3E3;
+}
+input[type=submit]
+{
+	margin-bottom: 20px;
+	width:100%;
+	padding: 15px;
+	border:1px solid #7ac9b7;
+	background-color: #4180C5;
+	color: aliceblue;
+	font-size:15px;
+	cursor:pointer;
+}
+#submit:hover
+{
+ background-color: black;
+}
+textarea{
+	width:100%;
+	padding: 15px;
+	margin-top: 10px;
+    border:1px solid #7ac9b7;
+	margin-bottom: 20px;
+	resize:none;
+  } 
+input[type=text]:focus,input[type=password]:focus,textarea:focus {
+	border-color: #4697e4;
+}';
 	
 	function __construct() {
 		$this->load_settings();
@@ -274,7 +290,7 @@ class login_settings {
 	function help_support(){ ?>
 	<table width="98%" border="0" style="background-color:#FFFFFF; border:1px solid #CCCCCC; padding:0px 0px 0px 10px; margin:2px;">
 	  <tr>
-		<td align="right"><a href="http://aviplugins.com/support.php" target="_blank">Help and Support</a></td>
+		<td align="right"><a href="http://www.aviplugins.com/support.php" target="_blank">Help and Support</a></td>
 	  </tr>
 	</table>
 	<?php
@@ -295,7 +311,7 @@ class login_settings {
 	function fb_login_pro_add(){ ?>
 	<table width="98%" border="0" style="background-color:#FFFFD2; border:1px solid #E6DB55; padding:0px 0px 0px 10px; margin:2px;">
   <tr>
-    <td><p>There is a PRO version of this plugin that supports login with <strong>Facebook</strong>, <strong>Google</strong>,  <strong>Twitter</strong> and <strong>LinkedIn</strong>. You can get it <a href="http://aviplugins.com/fb-login-widget-pro/" target="_blank">here</a> in <strong>USD 3.00</strong> </p></td>
+    <td><p>There is a PRO version of this plugin that supports login with <strong>Facebook</strong>, <strong>Google</strong>,  <strong>Twitter</strong> and <strong>LinkedIn</strong>. You can get it <a href="http://www.aviplugins.com/fb-login-widget-pro/" target="_blank">here</a> in <strong>USD 3.00</strong> </p></td>
   </tr>
 </table>
 	<?php }

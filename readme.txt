@@ -1,12 +1,12 @@
 === Login Widget With Shortcode ===
 Contributors: avimegladon
-Donate link: http://aviplugins.com/donate/
+Donate link: http://www.aviplugins.com/donate/
 Tags: login, widget, login widget, widget login, sidebar login, login form, user login, authentication, facebook login, twitter login, google login, google plus, facebook, twitter, social login, social media, facebook comments, fb comment, forgot password, reset password, link
 
 Requires at least: 2.0.2
 
 Tested up to: 4.2.2
-Stable tag: 4.2.4
+Stable tag: 5.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -29,9 +29,9 @@ This is a simple login form in the widget. This will allow users to login to the
 * Easy css implementation from admin panel.
 
 = Facebook Login Widget (PRO) =
-There is a PRO version of this plugin that supports login with <strong>Facebook</strong>, <strong>Google</strong>,  <strong>Twitter</strong> and <strong>LinkedIn</strong>. You can get it <a href="http://aviplugins.com/fb-login-widget-pro/" target="_blank">here</a> in <strong>USD 3.00</strong>
+There is a PRO version of this plugin that supports login with <strong>Facebook</strong>, <strong>Google</strong>,  <strong>Twitter</strong> and <strong>LinkedIn</strong>. You can get it <a href="http://www.aviplugins.com/fb-login-widget-pro/" target="_blank">here</a> in <strong>USD 3.00</strong>
 
-Click <a href="http://aviplugins.com/demo/login/" target="_blank">here</a> for a Live Demo.
+Click <a href="http://www.aviplugins.com/demo/login/" target="_blank">here</a> for a Live Demo.
 
 * The PRO version also comes with a content restriction Addon. Content of Pages and Posts can be hidden from visitors of your site.
 * Content Restriction can be applied from post edit page.
@@ -43,15 +43,15 @@ Click <a href="http://aviplugins.com/demo/login/" target="_blank">here</a> for a
 * And Other useful settings.
 
 = Facebook Comments Extension =
-This Add-on can be used to replace the default Wordpress Comments and insert Facebook / Disqus Comments system in  your site. You can get it <a href="http://aviplugins.com/fb-comments-afo-addon" target="_blank">here</a> in <strong>USD 1.00</strong>
+This Add-on can be used to replace the default Wordpress Comments and insert Facebook / Disqus Comments system in  your site. You can get it <a href="http://www.aviplugins.com/fb-comments-afo-addon" target="_blank">here</a> in <strong>USD 1.00</strong>
 
 * Facebook comments.
 * Disqus comments.
 * Globally turn off comments.
 
-> Checkout other plugins <a href="http://aviplugins.com/fb-login-widget-pro/">Facebook Login Widget (PRO)</a>, <a href="http://aviplugins.com/wp-register-profile-pro/">WP Register Profile</a>, <a href="http://aviplugins.com/custom-post-type-attachment-pro/">Post Type Attachment</a>, <a href="http://aviplugins.com/contact-form-with-shortcode-pro/">Newsletter Subscription</a>, <a href="http://aviplugins.com/wp-support-pro/">WP Support (PRO)</a>, <a href="http://aviplugins.com/wp-ecommerce-wishlist/">WP Ecommerce Wishlist</a>.
+> Checkout other plugins <a href="http://www.aviplugins.com/fb-login-widget-pro/">Facebook Login Widget (PRO)</a>, <a href="http://www.aviplugins.com/wp-register-profile-pro/">WP Register Profile</a>, <a href="http://www.aviplugins.com/custom-post-type-attachment-pro/">Post Type Attachment</a>, <a href="http://www.aviplugins.com/contact-form-with-shortcode-pro/">Newsletter Subscription</a>, <a href="http://www.aviplugins.com/wp-support-pro/">WP Support (PRO)</a>, <a href="http://www.aviplugins.com/wp-ecommerce-wishlist/">WP Ecommerce Wishlist</a>.
 
-> Post your plugin related queries at <a href="http://aviplugins.com/support.php">http://aviplugins.com/support.php</a>
+> Post your plugin related queries at <a href="http://www.aviplugins.com/support.php">http://www.aviplugins.com/support.php</a>
 
 == Installation ==
 
@@ -68,21 +68,25 @@ The Serbo-Croatian Language translation file is provided by <a href="http://www.
 
 = For any kind of problem =
 
-1. Please email me demoforafo@gmail.com. Contact me at http://aviplugins.com/support.php
+1. Please email me demoforafo@gmail.com. Contact me at http://www.aviplugins.com/support.php
 2. Or you can write comments directly to my plugins page. Please visit here http://avifoujdar.wordpress.com/2014/02/13/login-widget/
 
-* If you want to translate the plugin in your language please translate the sample .PO file and mail me the the file at demoforafo@gmail.com and I will include that in the language file. Sample .PO file can be downloaded from <a href="http://aviplugins.com/language-sample/lwa-es_ES.po">here</a>
+* If you want to translate the plugin in your language please translate the sample .PO file and mail me the the file at demoforafo@gmail.com and I will include that in the language file. Sample .PO file can be downloaded from <a href="http://www.aviplugins.com/language-sample/lwa-es_ES.po">here</a>
 
 
 == Screenshots ==
 
-1. front end sidebar view
+1. front end login sidebar view
 2. settings page view
 3. widget view
 4. Forgot password form
 5. facebook comments addon view
 
 == Changelog ==
+
+
+= 5.0.0 =
+* forms structure is updated, Now with fully responsive login form.
 
 = 4.2.4 =
 * forms structure is updated.
