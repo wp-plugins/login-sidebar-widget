@@ -55,6 +55,7 @@ input[type=text]:focus,input[type=password]:focus,textarea:focus {
 			update_option( 'login_afo_rem',  sanitize_text_field($_POST['login_afo_rem']) );
 			update_option( 'login_afo_forgot_pass_link',  sanitize_text_field($_POST['login_afo_forgot_pass_link']) );
 			update_option( 'login_afo_register_link',  sanitize_text_field($_POST['login_afo_register_link']) );
+			update_option( 'login_afo_fp_from_email',  sanitize_text_field($_POST['login_afo_fp_from_email']) );
 			
 			if(isset($_POST['load_default_style']) and $_POST['load_default_style'] == "Yes"){
 				update_option( 'custom_style_afo', sanitize_text_field($this->default_style) );
@@ -73,6 +74,7 @@ input[type=text]:focus,input[type=password]:focus,textarea:focus {
 	$login_afo_rem = get_option('login_afo_rem');
 	$login_afo_forgot_pass_link = get_option('login_afo_forgot_pass_link');
 	$login_afo_register_link = get_option('login_afo_register_link');
+	$login_afo_fp_from_email = get_option('login_afo_fp_from_email');
 	
 	$custom_style_afo = stripslashes(get_option('custom_style_afo'));
 	
@@ -169,6 +171,12 @@ input[type=text]:focus,input[type=password]:focus,textarea:focus {
 				wp_dropdown_pages( $args4 ); 
 			?>
 			<i>Leave blank to not include the link</i>
+			</td>
+	  </tr>
+	  <tr>
+		<td><strong>Forgot Password From Email</strong></td>
+		<td><input type="text" name="login_afo_fp_from_email" value="<?php echo $login_afo_fp_from_email;?>" placeholder="no-reply@example.com" />
+			<i>This will make sure that the mail does not go to spam folder.</i>
 			</td>
 	  </tr>
 	   <tr>

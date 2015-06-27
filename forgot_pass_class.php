@@ -10,15 +10,17 @@ class afo_forgot_pass_class {
 		$this->error_message();
 		if(!is_user_logged_in()){
 		?>
-		<form name="forgot" id="forgot" method="post" action="">
-		<input type="hidden" name="option" value="afo_forgot_pass" />
-			<ul class="login_wid forgot_pass">
-				<li><label for="email"><?php _e('Email','lwa');?></label></li>
-				<li><input type="text" name="user_username" required="required"/></li>
-				<li><input name="forgot" type="submit" value="<?php _e('Submit','lwa');?>" /></li>
-				<li class="forgot-text"><?php _e('Please enter your email. The password reset link will be provided in your email.','lwa');?></li>
-			</ul>
-		</form>
+			<div id="log_forms forgot_pass">
+			<form name="forgot" id="forgot" method="post" action="">
+			<input type="hidden" name="option" value="afo_forgot_pass" />
+			<div class="form-group">
+				<label for="email"><?php _e('Email','lwa');?> </label>
+				<input type="text" name="user_username" required="required"/>
+			</div>
+			<div class="form-group"><label for="login">&nbsp;</label><input name="forgot" type="submit" value="<?php _e('Submit','lwa');?>" /></div>
+			<div class="form-group forgot-text"><?php _e('Please enter your email. The password reset link will be provided in your email.','lwa');?></div>
+			</form>
+			</div>
 		<?php 
 		}
 	}
@@ -59,8 +61,14 @@ function forgot_pass_validate(){
 		if(!empty($reset_key) && !empty($user_data)) {
 			$new_password = wp_generate_password(7, false);
 				wp_set_password( $new_password, $user_data->ID );
+			
 			//mailing reset details to the user
-			$headers = 'From: '.get_bloginfo('name').' <no-reply@wordpress.com>' . "\r\n";
+			$login_afo_fp_from_email = get_option('login_afo_fp_from_email');
+			if($login_afo_fp_from_email == ''){
+				$login_afo_fp_from_email = 'no-reply@wordpress.com';
+			}
+			
+			$headers = 'From: '.get_bloginfo('name').' <'.$login_afo_fp_from_email.'>' . "\r\n";
 			$message = __('Your new password for the account at:','lwa') . "\r\n\r\n";
 			$message .= site_url() . "\r\n\r\n";
 			$message .= sprintf(__('Username: %s'), $user_login) . "\r\n\r\n";
@@ -110,7 +118,11 @@ function forgot_pass_validate(){
 			}
 			
 			//mailing reset details to the user
-			$headers = 'From: '.get_bloginfo('name').' <no-reply@wordpress.com>' . "\r\n";
+			$login_afo_fp_from_email = get_option('login_afo_fp_from_email');
+			if($login_afo_fp_from_email == ''){
+				$login_afo_fp_from_email = 'no-reply@wordpress.com';
+			}
+			$headers = 'From: '.get_bloginfo('name').' <'.$login_afo_fp_from_email.'>' . "\r\n";
 			$message = __('Someone requested that the password be reset for the following account:','lwa') . "\r\n\r\n";
 			$message .= site_url() . "\r\n\r\n";
 			$message .= sprintf(__('Username: %s'), $user_login) . "\r\n\r\n";
