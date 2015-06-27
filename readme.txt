@@ -84,9 +84,11 @@ The Serbo-Croatian Language translation file is provided by <a href="http://www.
 
 == Changelog ==
 
+= 5.1.0 =
+* Forgot password form email address added. aviplugins.com dashboard news widget added.
 
 = 5.0.0 =
-* forms structure is updated, Now with fully responsive login form.
+* forms structure is updated, Now with fully responsive login form. Make sure to reload the default styling of the plugin from plugin settings page.
 
 = 4.2.4 =
 * forms structure is updated.
