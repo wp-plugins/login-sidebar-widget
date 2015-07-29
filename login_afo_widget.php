@@ -78,13 +78,18 @@ class login_wid extends WP_Widget {
 		}
 		global $post;
 		$redirect_page = get_option('redirect_page');
+		$redirect_page_url = get_option('redirect_page_url');
 		$logout_redirect_page = get_option('logout_redirect_page');
 		$link_in_username = get_option('link_in_username');
 		
-		if($redirect_page){
-			$redirect =  get_permalink($redirect_page);
+		if($redirect_page_url){
+			$redirect = $redirect_page_url;
 		} else {
-			$redirect =  $this->curPageURL();
+			if($redirect_page){
+				$redirect = get_permalink($redirect_page);
+			} else {
+				$redirect = $this->curPageURL();
+			}
 		}
 		
 		if($logout_redirect_page){

@@ -5,8 +5,8 @@ Tags: login, widget, login widget, widget login, sidebar login, login form, user
 
 Requires at least: 2.0.2
 
-Tested up to: 4.2.2
-Stable tag: 5.1.0
+Tested up to: 4.2.3
+Stable tag: 5.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -83,6 +83,9 @@ The Serbo-Croatian Language translation file is provided by <a href="http://www.
 5. facebook comments addon view
 
 == Changelog ==
+
+= 5.1.1 =
+* Option to add after login redirect URL with redirect to page option.
 
 = 5.1.0 =
 * Forgot password form email address added. aviplugins.com dashboard news widget added.

@@ -50,6 +50,7 @@ input[type=text]:focus,input[type=password]:focus,textarea:focus {
 			} 
 		
 			update_option( 'redirect_page',  sanitize_text_field($_POST['redirect_page']) );
+			update_option( 'redirect_page_url',  sanitize_text_field($_POST['redirect_page_url']) );
 			update_option( 'logout_redirect_page',  sanitize_text_field($_POST['logout_redirect_page']) );
 			update_option( 'link_in_username',  sanitize_text_field($_POST['link_in_username']) );
 			update_option( 'login_afo_rem',  sanitize_text_field($_POST['login_afo_rem']) );
@@ -69,6 +70,7 @@ input[type=text]:focus,input[type=password]:focus,textarea:focus {
 	global $wpdb;
 	
 	$redirect_page = get_option('redirect_page');
+	$redirect_page_url = get_option('redirect_page_url');
 	$logout_redirect_page = get_option('logout_redirect_page');
 	$link_in_username = get_option('link_in_username');
 	$login_afo_rem = get_option('login_afo_rem');
@@ -88,11 +90,11 @@ input[type=text]:focus,input[type=password]:focus,textarea:focus {
 	<input type="hidden" name="option" value="login_widget_afo_save_settings" />
 	<table width="98%" style="background-color:#FFFFFF; border:1px solid #CCCCCC; padding:0px 0px 0px 10px; margin:2px;">
 	  <tr>
-		<td width="45%"><h1>Login Widget AFO Settings</h1></td>
+		<td width="45%"><h1><?php _e('Login Widget AFO Settings','lwa');?></h1></td>
 		<td width="55%">&nbsp;</td>
 	  </tr>
 	  <tr>
-		<td><strong>Login Redirect Page:</strong></td>
+		<td><strong><?php _e('Login Redirect Page','lwa');?>:</strong></td>
 		<td><?php
 				$args = array(
 				'depth'            => 0,
@@ -103,11 +105,11 @@ input[type=text]:focus,input[type=password]:focus,textarea:focus {
 				'name'             => 'redirect_page'
 				);
 				wp_dropdown_pages( $args ); 
-			?></td>
+			?> <?php _e('Or','lwa');?> <input type="text" name="redirect_page_url" value="<?php echo $redirect_page_url;?>" placeholder="URL" /></td>
 	  </tr>
 	  
 	   <tr>
-		<td><strong>Logout Redirect Page:</strong></td>
+		<td><strong><?php _e('Logout Redirect Page','lwa');?>:</strong></td>
 		 <td><?php
 				$args1 = array(
 				'depth'            => 0,
@@ -122,7 +124,7 @@ input[type=text]:focus,input[type=password]:focus,textarea:focus {
 	  </tr>
 	   
 	  <tr>
-		<td><strong>Link in Username</strong></td>
+		<td><strong><?php _e('Link in Username','lwa');?></strong></td>
 		<td><?php
 				$args2 = array(
 				'depth'            => 0,
@@ -136,11 +138,11 @@ input[type=text]:focus,input[type=password]:focus,textarea:focus {
 			?></td>
 	  </tr>
 	  <tr>
-		<td><strong>Add Remember Me</strong></td>
+		<td><strong><?php _e('Add Remember Me','lwa');?></strong></td>
 		<td><input type="checkbox" name="login_afo_rem" value="Yes" <?php echo $login_afo_rem == 'Yes'?'checked="checked"':'';?> /></td>
 	  </tr>
 	  <tr>
-		<td><strong>Forgot Password Link</strong></td>
+		<td><strong><?php _e('Forgot Password Link','lwa');?></strong></td>
 		<td>
 			<?php
 				$args3 = array(
@@ -170,22 +172,22 @@ input[type=text]:focus,input[type=password]:focus,textarea:focus {
 				);
 				wp_dropdown_pages( $args4 ); 
 			?>
-			<i>Leave blank to not include the link</i>
+			<i><?php _e('Leave blank to not include the link','lwa');?></i>
 			</td>
 	  </tr>
 	  <tr>
-		<td><strong>Forgot Password From Email</strong></td>
+		<td><strong><?php _e('Forgot Password From Email','lwa');?></strong></td>
 		<td><input type="text" name="login_afo_fp_from_email" value="<?php echo $login_afo_fp_from_email;?>" placeholder="no-reply@example.com" />
-			<i>This will make sure that the mail does not go to spam folder.</i>
+			<i><?php _e('This will make sure that the mail does not go to spam folder.','lwa');?></i>
 			</td>
 	  </tr>
 	   <tr>
-			<td width="45%"><h1>Styling</h1></td>
+			<td width="45%"><h1><?php _e('Styling','lwa');?></h1></td>
 			<td width="55%">&nbsp;</td>
 		  </tr>
 	   <tr>
-			<td valign="top"><input type="checkbox" name="load_default_style" value="Yes" /><strong> Load Default Styles</strong><br />
-			Check this and hit the save button to go back to default styling.
+			<td valign="top"><input type="checkbox" name="load_default_style" value="Yes" /><strong> <?php _e('Load Default Styles','lwa');?></strong><br />
+			<?php _e('Check this and hit the save button to go back to default styling.','lwa');?>
 			</td>
 			<td><textarea name="custom_style_afo" style="width:80%; height:200px;"><?php echo $custom_style_afo;?></textarea></td>
 		  </tr>
