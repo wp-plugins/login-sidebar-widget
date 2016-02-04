@@ -216,9 +216,18 @@ function login_validate(){
 			}
 			$creds['remember'] = $remember;
 			$user = wp_signon( $creds, true );
-			if($user->ID == ""){
+			if(is_wp_error($user)){
 				$_SESSION['msg_class'] = 'error_wid_login';
-				$_SESSION['msg'] = __('Error in login!','lwa');
+				$_SESSION['msg'] = $user->get_error_message();
+				// replace lost password link
+				$login_afo_forgot_pass_link = get_option('login_afo_forgot_pass_link');
+				if($login_afo_forgot_pass_link){
+					$_SESSION['msg'] = str_replace( wp_lostpassword_url(),
+                                                   get_permalink($login_afo_forgot_pass_link), $_SESSION['msg']);
+				}
+				// replace wp login url with current url
+				$_SESSION['msg'] = str_replace( wp_login_url(),
+                                               $_SERVER['REQUEST_URI'], $_SESSION['msg']);
 			} else{
 				wp_set_auth_cookie($user->ID, $remember);
 				wp_redirect( $_POST['redirect'] );
