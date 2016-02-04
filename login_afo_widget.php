@@ -75,12 +75,31 @@ class login_wid extends WP_Widget {
 		if(!session_id()){
 			@session_start();
 		}
-		global $post;
+		global $post, $error;
+
+		$action = isset($_REQUEST['action']) ? $_REQUEST['action'] : 'login';
+		/**
+		 * Fires before a specified login form action.
+		 *
+		 * The dynamic portion of the hook name, `$action`, refers to the action
+		 * that brought the visitor to the login form. Actions include 'postpass',
+		 * 'logout', 'lostpassword', etc.
+		 *
+		 * @since 2.8.0
+		 */
+		do_action( 'login_form_' . $action );
+
+		if ( !empty( $error ) ) {
+			$_SESSION['msg_class'] = 'error_wid_login';
+			$_SESSION['msg'] = $error;
+			unset($error);
+		}
+
 		$redirect_page = get_option('redirect_page');
 		$redirect_page_url = get_option('redirect_page_url');
 		$logout_redirect_page = get_option('logout_redirect_page');
 		$link_in_username = get_option('link_in_username');
-		
+
 		if($redirect_page_url){
 			$redirect = $redirect_page_url;
 		} else {
