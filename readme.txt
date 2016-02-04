@@ -2,11 +2,9 @@
 Contributors: avimegladon
 Donate link: http://www.aviplugins.com/donate/
 Tags: login, widget, login widget, widget login, sidebar login, login form, user login, authentication, facebook login, twitter login, google login, google plus, facebook, twitter, social login, social media, facebook comments, fb comment, forgot password, reset password, link
-
 Requires at least: 2.0.2
-
-Tested up to: 4.2.3
-Stable tag: 5.1.1
+Tested up to: 4.4
+Stable tag: 5.2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -42,14 +40,14 @@ Click <a href="http://www.aviplugins.com/demo/login/" target="_blank">here</a> f
 * Easy css implementation from admin panel.
 * And Other useful settings.
 
+> Checkout <strong>Social Login No Setup</strong> that supports login with <strong>Facebook</strong>, <strong>Google</strong>, <strong>Twitter</strong>, <strong>LinkedIn</strong> and <strong>Microsoft</strong> accounts and the most important part is that it requires no Setups, no Maintanance, no need to create any APPs, APIs, Client Ids, Client Secrets or anything. <a href="http://www.aviplugins.com/social-login-no-setup/" target="_blank">Click here for details</a> | <a href="http://aviplugins.com/demo/social-login/" target="_blank">Click here for Live Demo</a>
+
 = Facebook Comments Extension =
 This Add-on can be used to replace the default Wordpress Comments and insert Facebook / Disqus Comments system in  your site. You can get it <a href="http://www.aviplugins.com/fb-comments-afo-addon" target="_blank">here</a> in <strong>USD 1.00</strong>
 
 * Facebook comments.
 * Disqus comments.
 * Globally turn off comments.
-
-> Checkout other plugins <a href="http://www.aviplugins.com/fb-login-widget-pro/">Facebook Login Widget (PRO)</a>, <a href="http://www.aviplugins.com/wp-register-profile-pro/">WP Register Profile</a>, <a href="http://www.aviplugins.com/custom-post-type-attachment-pro/">Post Type Attachment</a>, <a href="http://www.aviplugins.com/contact-form-with-shortcode-pro/">Newsletter Subscription</a>, <a href="http://www.aviplugins.com/wp-support-pro/">WP Support (PRO)</a>, <a href="http://www.aviplugins.com/wp-ecommerce-wishlist/">WP Ecommerce Wishlist</a>.
 
 > Post your plugin related queries at <a href="http://www.aviplugins.com/support.php">http://www.aviplugins.com/support.php</a>
 
@@ -66,23 +64,42 @@ The Serbo-Croatian Language translation file is provided by <a href="http://www.
 
 == Frequently Asked Questions ==
 
-= For any kind of problem =
+= For any kind of queries =
 
 1. Please email me demoforafo@gmail.com. Contact me at http://www.aviplugins.com/support.php
 2. Or you can write comments directly to my plugins page. Please visit here http://avifoujdar.wordpress.com/2014/02/13/login-widget/
 
-* If you want to translate the plugin in your language please translate the sample .PO file and mail me the the file at demoforafo@gmail.com and I will include that in the language file. Sample .PO file can be downloaded from <a href="http://www.aviplugins.com/language-sample/lwa-es_ES.po">here</a>
+* If you want to translate the plugin in your language please translate the sample .PO file and mail me the the file at demoforafo@gmail.com and I will include that in the language file. Sample .PO file can be downloaded from <a href="http://www.aviplugins.com/language-sample/login-sidebar-widget-es_ES.po">here</a>
 
 
 == Screenshots ==
 
-1. front end login sidebar view
-2. settings page view
-3. widget view
-4. Forgot password form
-5. facebook comments addon view
+1. Frontend login widget view.
+2. Admin login with captcha security.
+3. settings page view.
+4. Widget view.
+5. Forgot password form.
+6. Facebook Comments Addon view.
 
 == Changelog ==
+
+= 5.2.1 =
+* plugin code modifications.
+
+= 5.2.0 =
+* Code updated with some security modifications.
+
+= 5.1.5 =
+* Captcha security added in admin and frontend login forms.
+
+= 5.1.4 =
+* plugin code optimized.
+
+= 5.1.3 =
+* news dashboard widget optimized.
+
+= 5.1.2 =
+* Settings saved message in admin panel.
 
 = 5.1.1 =
 * Option to add after login redirect URL with redirect to page option.

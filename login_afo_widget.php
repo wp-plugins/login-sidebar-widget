@@ -8,7 +8,7 @@ class login_wid extends WP_Widget {
 		parent::__construct(
 	 		'login_wid',
 			'Login Widget AFO',
-			array( 'description' => __( 'This is a simple login form in the widget.', 'lwa' ), )
+			array( 'description' => __( 'This is a simple login form in the widget.', 'login-sidebar-widget' ), )
 		);
 	 }
 
@@ -32,8 +32,7 @@ class login_wid extends WP_Widget {
 
 
 	public function form( $instance ) {
-		$wid_title = '';
-		$wid_title = $instance[ 'wid_title' ];
+		$wid_title = esc_html($instance[ 'wid_title' ]);
 		?>
 		<p><label for="<?php echo $this->get_field_id('wid_title'); ?>"><?php _e('Title:'); ?> </label>
 		<input class="widefat" id="<?php echo $this->get_field_id('wid_title'); ?>" name="<?php echo $this->get_field_name('wid_title'); ?>" type="text" value="<?php echo $wid_title; ?>" />
@@ -44,7 +43,7 @@ class login_wid extends WP_Widget {
 	public function add_remember_me(){
 		$login_afo_rem = get_option('login_afo_rem');
 		if($login_afo_rem == 'Yes'){
-			echo '<label for="remember"> '.__('Remember Me','lwa').'</label>  <input type="checkbox" name="remember" value="Yes" />';
+			echo '<label for="remember"> '.__('Remember Me','login-sidebar-widget').'</label>  <input type="checkbox" name="remember" value="Yes" />';
 		}
 	}
 	
@@ -52,10 +51,10 @@ class login_wid extends WP_Widget {
 		$login_afo_forgot_pass_link = get_option('login_afo_forgot_pass_link');
 		$login_afo_register_link = get_option('login_afo_register_link');
 		if($login_afo_forgot_pass_link){
-			echo '<a href="'.get_permalink($login_afo_forgot_pass_link).'">'.__('Lost Password?','lwa').'</a>';
+			echo '<a href="'. esc_url( get_permalink($login_afo_forgot_pass_link) ).'">'.__('Lost Password?','login-sidebar-widget').'</a>';
 		}
 		if($login_afo_register_link){
-			echo ' | <a href="'.get_permalink($login_afo_register_link).'">'.__('Register','lwa').'</a>';
+			echo ' | <a href="'. esc_url( get_permalink($login_afo_register_link) ) .'">'.__('Register','login-sidebar-widget').'</a>';
 		}
 	}
 	
@@ -104,19 +103,20 @@ class login_wid extends WP_Widget {
 		<div id="log_forms">
 		<form name="login" id="login" method="post" action="">
 		<input type="hidden" name="option" value="afo_user_login" />
-		<input type="hidden" name="redirect" value="<?php echo $redirect; ?>" />
+		<input type="hidden" name="redirect" value="<?php echo esc_url( $redirect ); ?>" />
 		<div class="form-group">
-			<label for="username"><?php _e('Username','lwa');?> </label>
+			<label for="username"><?php _e('Username','login-sidebar-widget');?> </label>
 			<input type="text" name="user_username" required="required"/>
 		</div>
 		<div class="form-group">
-			<label for="password"><?php _e('Password','lwa');?> </label>
+			<label for="password"><?php _e('Password','login-sidebar-widget');?> </label>
 			<input type="password" name="user_password" required="required"/>
 		</div>
+        <?php do_action('login_afo_form');?>
 		<div class="form-group">
 			<?php $this->add_remember_me();?>
 		</div>
-		<div class="form-group"><label for="login">&nbsp;</label><input name="login" type="submit" value="<?php _e('Login','lwa');?>" /></div>
+		<div class="form-group"><label for="login">&nbsp;</label><input name="login" type="submit" value="<?php _e('Login','login-sidebar-widget');?>" /></div>
 		<div class="form-group">
 			<?php $this->add_extra_links();?>
 		</div>
@@ -128,13 +128,13 @@ class login_wid extends WP_Widget {
      	get_currentuserinfo();
 		
 		if($link_in_username){
-			$link_with_username = '<a href="'.get_permalink($link_in_username).'">'.__('Howdy','lwa').', '.$current_user->display_name.'</a>';
+			$link_with_username = '<a href="'. esc_url( get_permalink($link_in_username) ) .'">'.__('Howdy','login-sidebar-widget').', '.$current_user->display_name.'</a>';
 		} else {
-			$link_with_username = __('Howdy','lwa').', '.$current_user->display_name;
+			$link_with_username = __('Howdy','login-sidebar-widget').', '.$current_user->display_name;
 		}
 		?>
 		<ul style="list-style-type:none;">
-			<li><?php echo $link_with_username;?> | <a href="<?php echo wp_logout_url( $logout_redirect_page ); ?>" title="<?php _e('Logout','lwa');?>"><?php _e('Logout','lwa');?></a></li>
+			<li><?php echo $link_with_username;?> | <a href="<?php echo wp_logout_url( $logout_redirect_page ); ?>" title="<?php _e('Logout','login-sidebar-widget');?>"><?php _e('Logout','login-sidebar-widget');?></a></li>
 		</ul>
 		<?php 
 		}
@@ -177,11 +177,20 @@ function login_validate(){
 			session_start();
 		}
 		global $post;
+		
+		$captcha_on_user_login = (get_option('captcha_on_user_login') == 'Yes'?true:false);
+		
+		if( $captcha_on_user_login and (isset($_POST['user_captcha']) and $_POST['user_captcha'] != $_SESSION['captcha_code']) ){
+			$_SESSION['msg_class'] = 'error_wid_login';
+			$_SESSION['msg'] = __('Security code do not match!','login-sidebar-widget');
+			return;
+		} 
+		
 		if($_POST['user_username'] != "" and $_POST['user_password'] != ""){
 			$creds = array();
-			$creds['user_login'] = $_POST['user_username'];
-			$creds['user_password'] = $_POST['user_password'];
-			if($_POST['remember'] == 'Yes'){
+			$creds['user_login'] = sanitize_text_field($_POST['user_username']);
+			$creds['user_password'] = sanitize_text_field($_POST['user_password']);
+			if(sanitize_text_field($_POST['remember']) == 'Yes'){
 				$remember = true;
 			} else {
 				$remember = false;
@@ -198,12 +207,10 @@ function login_validate(){
 			}
 		} else {
 			$_SESSION['msg_class'] = 'error_wid_login';
-			$_SESSION['msg'] = __('Username or password is empty!','lwa');
+			$_SESSION['msg'] = __('Username or password is empty!','login-sidebar-widget');
 		}
-		
 	}
 }
 
 add_action( 'widgets_init', create_function( '', 'register_widget( "login_wid" );' ) );
 add_action( 'init', 'login_validate' );
-?>
