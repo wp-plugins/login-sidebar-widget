@@ -14,11 +14,11 @@ class afo_forgot_pass_class {
 			<form name="forgot" id="forgot" method="post" action="">
 			<input type="hidden" name="option" value="afo_forgot_pass" />
 			<div class="form-group">
-				<label for="email"><?php _e('Email','lwa');?> </label>
+				<label for="email"><?php _e('Email','login-sidebar-widget');?> </label>
 				<input type="text" name="user_username" required="required"/>
 			</div>
-			<div class="form-group"><label for="login">&nbsp;</label><input name="forgot" type="submit" value="<?php _e('Submit','lwa');?>" /></div>
-			<div class="form-group forgot-text"><?php _e('Please enter your email. The password reset link will be provided in your email.','lwa');?></div>
+			<div class="form-group"><label for="login">&nbsp;</label><input name="forgot" type="submit" value="<?php _e('Submit','login-sidebar-widget');?>" /></div>
+			<div class="form-group forgot-text"><?php _e('Please enter your email. The password reset link will be provided in your email.','login-sidebar-widget');?></div>
 			</form>
 			</div>
 		<?php 
@@ -51,8 +51,8 @@ function forgot_pass_validate(){
 	
 	if(isset($_GET['key']) && $_GET['action'] == "reset_pwd") {
 		global $wpdb;
-		$reset_key = $_GET['key'];
-		$user_login = $_GET['login'];
+		$reset_key = sanitize_text_field($_GET['key']);
+		$user_login = sanitize_text_field($_GET['login']);
 		$user_data = $wpdb->get_row($wpdb->prepare("SELECT ID, user_login, user_email FROM $wpdb->users WHERE user_activation_key = %s AND user_login = %s", $reset_key, $user_login));
 		
 		$user_login = $user_data->user_login;
@@ -69,11 +69,11 @@ function forgot_pass_validate(){
 			}
 			
 			$headers = 'From: '.get_bloginfo('name').' <'.$login_afo_fp_from_email.'>' . "\r\n";
-			$message = __('Your new password for the account at:','lwa') . "\r\n\r\n";
+			$message = __('Your new password for the account at:','login-sidebar-widget') . "\r\n\r\n";
 			$message .= site_url() . "\r\n\r\n";
 			$message .= sprintf(__('Username: %s'), $user_login) . "\r\n\r\n";
 			$message .= sprintf(__('Password: %s'), $new_password) . "\r\n\r\n";
-			$message .= __('You can now login with your new password at: ','lwa') . site_url() . "\r\n\r\n";
+			$message .= __('You can now login with your new password at: ','login-sidebar-widget') . site_url() . "\r\n\r\n";
 			
 			if ( $message && !wp_mail($user_email, 'Password Reset Request', $message, $headers) ) {
 				wp_die('Email failed to send for some unknown reason');
@@ -96,7 +96,7 @@ function forgot_pass_validate(){
 		$msg = '';
 		if(empty($_POST['user_username'])) {
 			$_SESSION['msg_class'] = 'error_wid_login';
-			$msg .= __('Email is empty!','lwa');
+			$msg .= __('Email is empty!','login-sidebar-widget');
 		}
 		
 		$user_username = $wpdb->escape(trim($_POST['user_username']));
@@ -104,7 +104,7 @@ function forgot_pass_validate(){
 		$user_data = get_user_by('email', $user_username);
 		if(empty($user_data)) { 
 			$_SESSION['msg_class'] = 'error_wid_login';
-			$msg .= __('Invalid E-mail address!','lwa');
+			$msg .= __('Invalid E-mail address!','login-sidebar-widget');
 		}
 		
 		$user_login = $user_data->data->user_login;
@@ -123,20 +123,20 @@ function forgot_pass_validate(){
 				$login_afo_fp_from_email = 'no-reply@wordpress.com';
 			}
 			$headers = 'From: '.get_bloginfo('name').' <'.$login_afo_fp_from_email.'>' . "\r\n";
-			$message = __('Someone requested that the password be reset for the following account:','lwa') . "\r\n\r\n";
+			$message = __('Someone requested that the password be reset for the following account:','login-sidebar-widget') . "\r\n\r\n";
 			$message .= site_url() . "\r\n\r\n";
 			$message .= sprintf(__('Username: %s'), $user_login) . "\r\n\r\n";
-			$message .= __('If this was a mistake, just ignore this email and nothing will happen.','lwa') . "\r\n\r\n";
-			$message .= __('To reset your password, visit the following address:','lwa') . "\r\n\r\n";
+			$message .= __('If this was a mistake, just ignore this email and nothing will happen.','login-sidebar-widget') . "\r\n\r\n";
+			$message .= __('To reset your password, visit the following address:','login-sidebar-widget') . "\r\n\r\n";
 			$message .= site_url() . "?action=reset_pwd&key=$key&login=" . rawurlencode($user_login) . "\r\n";
 			
 			if ( !wp_mail($user_email, 'Password Reset Request', $message, $headers) ) {
 				$_SESSION['msg_class'] = 'error_wid_login';
-				$_SESSION['msg'] = __('Email failed to send for some unknown reason.','lwa');
+				$_SESSION['msg'] = __('Email failed to send for some unknown reason.','login-sidebar-widget');
 			}
 			else {
 				$_SESSION['msg_class'] = 'success_wid_login';
-				$_SESSION['msg'] = __('We have just sent you an email with Password reset instructions.','lwa');
+				$_SESSION['msg'] = __('We have just sent you an email with Password reset instructions.','login-sidebar-widget');
 			}
 		} else {
 			$_SESSION['msg_class'] = 'error_wid_login';
@@ -145,6 +145,4 @@ function forgot_pass_validate(){
 	}
 }
 	
-
 add_action( 'init', 'forgot_pass_validate' );
-?>
